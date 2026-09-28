@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empowering Women Food Entrepreneurs Digitally | Home Chefs, Bakers & Tiffin Makers</title>
+  <meta name="description" content="A specialized digital empowerment hub for women home chefs, bakers, pickle artisans, and tiffin providers. Learn food reels, digital menus, FSSAI hygiene, and recipe pricing." />
+  
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20100%22><text y=%22.9em%22 font-size=%2290%22>🍲</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Annapurna Digital Home">
+        <div class="logo-icon">🍲</div>
+        <div class="brand-text">
+          <span>Annapurna</span><span style="color: var(--primary-pink);">Digital</span>
+        </div>
+      </a>
+
+      <nav class="nav-wrapper">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#food-menu" class="nav-link nav-highlight">🍲 Homemade Foods</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Food Skills</a></li>
+          <li><a href="#resources" class="nav-link">Resources</a></li>
+          <li><a href="#stories" class="nav-link">Stories</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-cart-btn" id="navCartBtn" onclick="toggleCartDrawer()" aria-label="Shopping Cart">
+          <span class="cart-btn-icon">🛒</span>
+          <span class="cart-btn-label">Cart</span>
+          <span class="cart-count-badge" id="navCartBadge">0</span>
+        </button>
+        <a href="#skills" class="btn btn-primary btn-sm nav-cta-btn">
+          <span>👩‍🍳 Start Selling</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>🍲 For Home Cooks, Bakers & Tiffin Makers</span>
+            <span style="color: var(--primary-pink);">• 100% Free Kitchen Guides</span>
+          </div>
+
+          <h1 class="hero-title">
+            Empowering Women <br />
+            <span class="gradient-text">Food Entrepreneurs Digitally</span>
+          </h1>
+
+          <p class="hero-description">
+            Turn your family recipes, delicious tiffins, artisanal cakes, and homemade pickles into a thriving food brand. Learn mouthwatering food reels, zero-commission digital menus, advance UPI bookings, and basic FSSAI hygiene rules.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#skills" class="btn btn-primary">
+              <span>🌸 Start Your Food Journey</span>
+            </a>
+            <a href="#resources" class="btn btn-secondary">
+              <span>🧮 Recipe Cost & Tiffin Calculator</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <h4>6+</h4>
+              <p>Food Digital Guides</p>
+            </div>
+            <div class="stat-item">
+              <h4>0%</h4>
+              <p>Aggregator Commission</p>
+            </div>
+            <div class="stat-item">
+              <h4>₹100/yr</h4>
+              <p>Basic FSSAI Registration</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="floating-pill pill-1">
+            <span>🍱</span>
+            <span>85+ Daily Tiffin Subscribers</span>
+          </div>
+          <div class="floating-pill pill-2">
+            <span>🧁</span>
+            <span>Weekend Cake Slots Booked</span>
+          </div>
+
+          <!-- Interactive Food Readiness Quiz Card -->
+          <div class="hero-card-stack" id="heroQuizCard">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Feature Highlights Strip (4 food highlight cards)
+       ========================================================================== -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">🍲</div>
+          <h3>Mouthwatering Food Reels</h3>
+          <p>Learn to capture steaming hot gravies, ASMR cake frosting, and design Canva weekly menu cards.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">📱</div>
+          <h3>Zero-Commission Menus</h3>
+          <p>Create direct WhatsApp & online ordering links without losing 30% to food delivery middle-men.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">💳</div>
+          <h3>Advance UPI Deposits</h3>
+          <p>Stop last-minute cancellations on custom party platters and cakes with 100% upfront booking.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🔒</div>
+          <h3>FSSAI & Hygiene Safety</h3>
+          <p>Easy ₹100/year basic food registration guide, tamper-proof foil packaging, and allergen disclosure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Homemade Food Showcase / Marketplace Section
+       ========================================================================== -->
+  <section id="food-menu" class="food-menu-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🍲 100% Home Kitchen Fresh</div>
+        <h2 class="section-title">Ghar Ka Khana • <span class="gradient-text">Homemade Delicacies</span></h2>
+        <p class="section-subtitle">
+          Order pure, hygienic, preservative-free food prepared by empowered women home chefs with genuine motherly love. Direct kitchen to doorstep!
+        </p>
+      </div>
+
+      <!-- Controls: Category Filter Tabs, Search & "Add Food" CTA -->
+      <div class="food-menu-controls">
+        <div class="food-categories-bar" id="foodCategoriesBar">
+          <button class="food-cat-btn active" data-cat="all">🍽️ All Homemade Foods</button>
+          <button class="food-cat-btn" data-cat="tiffins">🍱 Daily Tiffins & Meals</button>
+          <button class="food-cat-btn" data-cat="pickles">👵 Heirloom Pickles & Masalas</button>
+          <button class="food-cat-btn" data-cat="bakes">🎂 Home Bakes & Cakes</button>
+          <button class="food-cat-btn" data-cat="sweets">🪔 Festive Sweets & Snacks</button>
+          <button class="food-cat-btn" data-cat="special">🥘 Weekend Party Feasts</button>
+        </div>
+
+        <div class="food-search-row">
+          <div class="search-input-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="foodSearchInput" placeholder="Search by dish (e.g. Biryani, Pickle, Thepla, Cake, Thali)..." aria-label="Search homemade food" />
+          </div>
+
+          <button class="btn btn-primary" onclick="openAddFoodModal()">
+            <span>➕ List Your Homemade Dish</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Food Items Grid -->
+      <div class="food-cards-grid" id="foodCardsGrid">
+        <!-- Injected dynamically via JS -->
+      </div>
+
+      <!-- Home Chef Benefit Banner -->
+      <div class="chef-join-banner">
+        <div class="chef-banner-text">
+          <h3>👩‍🍳 Are You a Home Cook or Baker?</h3>
+          <p>List your signature homemade specialties, get direct orders on your WhatsApp without any middle-men or high commissions, and grow your independent food brand!</p>
+        </div>
+        <button class="btn btn-secondary" onclick="openAddFoodModal()">
+          <span>🌸 Join as a Home Chef Free</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About Section
+       ========================================================================== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="section-badge">🌸 The Home Chef Movement</div>
+          <h2>From Your Family Kitchen to a Respected Food Brand</h2>
+          <p class="about-intro-lead">
+            Millions of women cook extraordinary food every single day with unconditional love and traditional secrets passed down through generations.
+          </p>
+          <p class="about-text">
+            <strong>What is home food entrepreneurship?</strong> It is the power of turning your homemade cooking—whether wholesome daily tiffins, authentic seasonal pickles, custom birthday cakes, or festive sweets—into an independent, profitable business operated right from your kitchen.
+          </p>
+          <p class="about-text">
+            <strong>Why digital skills are essential for home chefs:</strong> You don't need to rent an expensive restaurant space or pay 30% commissions to food apps. With simple smartphone tools, WhatsApp business catalogs, and intra-city delivery apps (Porter/Dunzo/Borzo), you can deliver fresh homemade food to hundreds of satisfied customers across your city.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon">🎯</div>
+              <div>
+                <h4>Our Aim</h4>
+                <p>Equip every woman home cook with digital tools, recipe costing frameworks, and packaging techniques to achieve financial independence.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">🥗</div>
+              <div>
+                <h4>Pure, Clean & Homestyle</h4>
+                <p>Help consumers access healthy, preservative-free, hygienic homemade meals prepared with genuine motherly care.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#skills" class="btn btn-primary btn-sm">
+            <span>Explore Food Skill Guides ➔</span>
+          </a>
+        </div>
+
+        <div class="about-graphic-card">
+          <div class="quote-highlight">
+            <p>“There is no taste in any five-star restaurant that can ever match the warmth and purity of authentic homemade food.”</p>
+            <span>— Annapurna Digital Philosophy</span>
+          </div>
+
+          <div class="about-stats-grid">
+            <div class="stat-box">
+              <div class="num">70%+</div>
+              <div class="lbl">People prefer healthy home food</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">3x</div>
+              <div class="lbl">Better profit via direct WhatsApp</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">15 Min</div>
+              <div class="lbl">To apply for Basic FSSAI</div>
+            </div>
+            <div class="stat-box">
+              <div class="num">100%</div>
+              <div class="lbl">Fresh, authentic & hygienic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Digital Skills Section (6 Key Modules)
+       ========================================================================== -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">📚 Kitchen Learning Hub</div>
+        <h2 class="section-title">Master Essential <span class="gradient-text">Food Business Skills</span></h2>
+        <p class="section-subtitle">
+          Click on any guide below to view step-by-step cooking videos advice, Canva food menus, packaging rules, and action checklists.
+        </p>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Business Resources & Interactive Food Calculator Section
+       ========================================================================== -->
+  <section id="resources" class="resources-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">📊 Food Costing & Toolkits</div>
+        <h2 class="section-title">Recipe Costing & <span class="gradient-text">Food Resources</span></h2>
+        <p class="section-subtitle">
+          Calculate your exact ingredient costs, packaging, and profit margins to price your tiffins, cakes, and food platters accurately.
+        </p>
+      </div>
+
+      <div class="resources-tabs">
+        <button class="tab-btn active" data-target="tab-guides">📖 Homemade Food Playbooks</button>
+        <button class="tab-btn" data-target="tab-calc">🧮 Recipe Cost & Tiffin Pricing Calculator</button>
+      </div>
+
+      <!-- Tab 1: Curated Guides -->
+      <div class="tab-content active" id="tab-guides">
+        <div class="res-grid" id="resourcesGrid">
+          <!-- Rendered dynamically from data.js -->
+        </div>
+      </div>
+
+      <!-- Tab 2: Interactive Food Calculator -->
+      <div class="tab-content" id="tab-calc">
+        <div class="calculator-container">
+          <div class="calc-grid">
+            <div class="calc-inputs">
+              <h3 style="font-size: 1.4rem; color: var(--purple-900);">Recipe & Tiffin Portion Costing</h3>
+              <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+                Enter your ingredient raw cost, container packing, and monthly income goal to calculate the ideal selling price per plate and orders needed.
+              </p>
+
+              <div class="input-group">
+                <label for="calcRawCost">Raw Ingredients Cost per Meal/Cake (₹) *</label>
+                <input type="number" id="calcRawCost" value="55" min="0" step="5" />
+              </div>
+
+              <div class="input-group">
+                <label for="calcPackCost">Spill-proof Container, Foil Box & Stickers (₹)</label>
+                <input type="number" id="calcPackCost" value="15" min="0" step="1" />
+              </div>
+
+              <div class="input-group">
+                <label for="calcUtilityCost">Cooking Gas, Electricity & Kitchen Utility per Portion (₹)</label>
+                <input type="number" id="calcUtilityCost" value="10" min="0" step="1" />
+              </div>
+
+              <div class="input-group">
+                <label for="calcMarginPercent">Desired Net Profit Margin (%)</label>
+                <input type="number" id="calcMarginPercent" value="45" min="10" max="80" step="1" />
+              </div>
+
+              <div class="input-group">
+                <label for="calcTargetProfit">Monthly Target Income Goal (₹)</label>
+                <input type="number" id="calcTargetProfit" value="25000" min="1000" step="1000" />
+              </div>
+            </div>
+
+            <div class="calc-results-card">
+              <h4>🍲 Plate Costing Breakdown</h4>
+
+              <div class="result-row">
+                <span>Total Base Cost per Meal:</span>
+                <span class="val" id="calcResTotalCost">₹80.00</span>
+              </div>
+
+              <div class="result-row">
+                <span>Net Profit per Plate/Box:</span>
+                <span class="val" id="calcResNetProfit" style="color: #10b981;">₹65.45</span>
+              </div>
+
+              <div class="result-row">
+                <span>Monthly Orders Needed:</span>
+                <span class="val" id="calcResUnitsNeeded">382 meals/mo (~15 daily orders)</span>
+              </div>
+
+              <div class="result-row highlight">
+                <span>Recommended Selling Price:</span>
+                <span class="val" id="calcResSellingPrice">₹145</span>
+              </div>
+
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.5;">
+                💡 <em>Chef's Rule: Never underprice your homemade food! Consumers gladly pay a fair premium for hygienic, unadulterated food cooked with love.</em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Success Stories Section (4 Home Chef Stories)
+       ========================================================================== -->
+  <section id="stories" class="stories-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🌟 Inspiring Home Chefs</div>
+        <h2 class="section-title">Real Women <span class="gradient-text">Food Success Stories</span></h2>
+        <p class="section-subtitle">
+          See how everyday women transformed family recipes into famous local home bakeries, tiffin subscriptions, and pickle enterprises.
+        </p>
+      </div>
+
+      <div class="stories-grid" id="storiesGrid">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ Section
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">❓ Home Cook FAQs</div>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p class="section-subtitle">
+          Essential answers on FSSAI licenses, delivery couriers, cancellation policies, and kitchen pricing.
+        </p>
+      </div>
+
+      <div class="faq-container" id="faqContainer">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact Section
+       ========================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-badge">💌 Join Our Home Chef Network</div>
+          <h2>Ready to Take Your Kitchen Online?</h2>
+          <p>
+            Have a question about FSSAI licensing, setting up WhatsApp ordering, or want to feature your delicious homemade food story? We are here to support you!
+          </p>
+
+          <div class="contact-card-box">
+            <div class="info-item">
+              <div class="info-icon">🍲</div>
+              <div>
+                <h4>Direct Email</h4>
+                <p>homechefs@annapurnadigital.org</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">💬</div>
+              <div>
+                <h4>Home Chef WhatsApp Helpline</h4>
+                <p>+91 (0) 98765 43210 (Mon-Sat, 9am - 7pm)</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div>
+                <h4>Pan-India Community</h4>
+                <p>Supportive Network of 5,000+ Women Home Chefs & Bakers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--purple-900);">Ask a Question / Join Us</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            Fill in your food specialization and our mentor team will guide you within 24 hours.
+          </p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Your Name / Kitchen Name *</label>
+              <input type="text" id="contactName" class="form-control" placeholder="e.g. Sunita's Kitchen / Sunita Deshmukh" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="sunita@gmail.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">What Homemade Food Do You Make? *</label>
+              <textarea id="contactMessage" class="form-control" placeholder="e.g. I make authentic Gujarati tiffins and seasonal pickles, and need help setting up WhatsApp ordering and FSSAI..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>🍲 Send Kitchen Inquiry</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Newsletter Callout Banner -->
+      <div class="newsletter-banner">
+        <div class="newsletter-content">
+          <h2>Join 5,000+ Women Home Chefs</h2>
+          <p>Get weekly seasonal food trends, Canva festive menu templates, recipe costing sheets, and marketing guides delivered free.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email address..." required aria-label="Email address for food newsletter" />
+            <button type="submit" class="btn btn-primary">Subscribe Free 💌</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo" style="color: #fff;">
+            <div class="logo-icon">🍲</div>
+            <div><span>Annapurna</span><span style="color: var(--pink-200);">Digital</span></div>
+          </a>
+          <p>
+            Dedicated to empowering women home cooks, bakers, tiffin providers, and traditional food artisans with digital skills, hygiene standards, and fair profits.
+          </p>
+          <div class="footer-socials">
+            <a href="#home" class="social-circle" aria-label="Instagram">📷</a>
+            <a href="#home" class="social-circle" aria-label="YouTube">▶️</a>
+            <a href="#home" class="social-circle" aria-label="WhatsApp">💬</a>
+            <a href="#home" class="social-circle" aria-label="Facebook">📘</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Home Chef Initiative</a></li>
+            <li><a href="#skills">Digital Food Skills</a></li>
+            <li><a href="#resources">Recipe Cost Calculator</a></li>
+            <li><a href="#stories">Success Stories</a></li>
+            <li><a href="#contact">Contact & Community</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Food Guides</h4>
+          <ul class="footer-links">
+            <li><a href="#skills" onclick="openSkillModal('food-reels')">Food Styling & Reels</a></li>
+            <li><a href="#skills" onclick="openSkillModal('digital-menu-site')">0% Commission Digital Menu</a></li>
+            <li><a href="#skills" onclick="openSkillModal('digital-payments-food')">Advance UPI Booking</a></li>
+            <li><a href="#skills" onclick="openSkillModal('whatsapp-food-business')">WhatsApp Food Ordering</a></li>
+            <li><a href="#skills" onclick="openSkillModal('food-photography')">Smartphone Food Photos</a></li>
+            <li><a href="#skills" onclick="openSkillModal('fssai-hygiene-safety')">Basic FSSAI Registration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Chef's Blessing</h4>
+          <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;">
+            “Cooking for others is an act of pure love. When paired with digital tools, it becomes your passport to financial freedom.”
+          </p>
+          <div style="margin-top: 1rem; font-weight: 700; color: var(--pink-200); font-size: 0.9rem;">
+            Annapurna Digital © 2026
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Crafted with 💖 for Women Home Chefs, Bakers & Food Artisans Everywhere.</div>
+        <div>Free Open-Access Educational Portal • All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Modal Overlay
+       ========================================================================== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeModal()" aria-label="Close dialog">✕</button>
+      <div id="modalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Slide-out Shopping Cart Drawer
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay" onclick="closeCartDrawer(event)">
+    <div class="cart-drawer" id="cartDrawer" onclick="event.stopPropagation()">
+      <div class="cart-drawer-header">
+        <div class="cart-header-title">
+          <span>🛒</span>
+          <h3>Your Food Cart</h3>
+          <span class="cart-drawer-badge" id="cartDrawerCount">0 items</span>
+        </div>
+        <button class="cart-drawer-close" onclick="closeCartDrawer()" aria-label="Close cart">✕</button>
+      </div>
+
+      <div class="cart-drawer-body" id="cartDrawerBody">
+        <!-- Injected dynamically via JS -->
+      </div>
+
+      <div class="cart-drawer-footer" id="cartDrawerFooter">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Sticky Cart Button -->
+  <button class="floating-cart-btn" id="floatingCartBtn" onclick="toggleCartDrawer()" aria-label="View Cart">
+    <span class="float-cart-icon">🛒</span>
+    <span class="float-cart-text">View Cart</span>
+    <span class="float-cart-count" id="floatingCartCount">0</span>
+  </button>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
