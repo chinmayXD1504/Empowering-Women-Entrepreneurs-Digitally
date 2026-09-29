@@ -12,7 +12,2860 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css" />
+  <style>
+/* ==========================================================================
+   Empowering Women Entrepreneurs Digitally - Master Stylesheet
+   Theme: Pink + Purple + White Clean Modern Aesthetic
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --primary-pink: #ec4899;
+  --primary-pink-hover: #db2777;
+  --pink-light: #fdf2f8;
+  --pink-50: #fff1f2;
+  --pink-100: #fce7f3;
+  --pink-200: #fbcfe8;
+  --pink-500: #ec4899;
+  --pink-600: #db2777;
+  
+  --primary-purple: #8b5cf6;
+  --primary-purple-hover: #7c3aed;
+  --purple-light: #f5f3ff;
+  --purple-50: #fbfbfe;
+  --purple-100: #ede9fe;
+  --purple-200: #ddd6fe;
+  --purple-600: #7c3aed;
+  --purple-800: #5b21b6;
+  --purple-900: #4c1d95;
+
+  --accent-rose: #f43f5e;
+  --accent-amber: #f59e0b;
+  --accent-emerald: #10b981;
+  --accent-cyan: #06b6d4;
+
+  --bg-main: #faf7fc;
+  --bg-card: #ffffff;
+  --bg-card-alt: #fcf9fe;
+  --text-main: #1e1b4b;
+  --text-muted: #64748b;
+  --text-sub: #475569;
+  --border-light: #f1e8f7;
+  --border-pink: #fce7f3;
+  
+  /* Gradients */
+  --grad-pink-purple: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  --grad-soft-pink-purple: linear-gradient(135deg, #fdf2f8 0%, #f5f3ff 100%);
+  --grad-hero: linear-gradient(180deg, #fff5f8 0%, #f5f3ff 60%, #faf7fc 100%);
+  --grad-card-glow: linear-gradient(135deg, rgba(236, 72, 153, 0.08), rgba(139, 92, 246, 0.08));
+  --grad-purple-deep: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(139, 92, 246, 0.06);
+  --shadow-md: 0 8px 24px rgba(139, 92, 246, 0.08), 0 2px 6px rgba(236, 72, 153, 0.04);
+  --shadow-lg: 0 16px 36px rgba(139, 92, 246, 0.12), 0 4px 12px rgba(236, 72, 153, 0.08);
+  --shadow-hover: 0 20px 40px rgba(139, 92, 246, 0.18), 0 6px 16px rgba(236, 72, 153, 0.12);
+  --shadow-pink-glow: 0 8px 25px rgba(236, 72, 153, 0.35);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--grad-pink-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  background: var(--pink-100);
+  color: var(--purple-900);
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-normal);
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--grad-pink-purple);
+  color: #ffffff;
+  box-shadow: var(--shadow-pink-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.45);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--purple-900);
+  border: 1.5px solid var(--purple-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: var(--purple-50);
+  border-color: var(--primary-purple);
+  color: var(--primary-purple);
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.88rem;
+}
+
+/* ==========================================================================
+   Header & Navbar
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(236, 72, 153, 0.12);
+  transition: var(--transition-fast);
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.08);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  gap: 1.25rem;
+  max-width: 1320px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  color: var(--purple-900);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brand-logo .logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--grad-pink-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  flex-shrink: 0;
+}
+
+.brand-logo .brand-text {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-sub);
+  position: relative;
+  padding: 0.4rem 0.2rem;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.nav-link.nav-highlight {
+  color: var(--primary-pink);
+  font-weight: 700;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-pink);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2.5px;
+  background: var(--grad-pink-purple);
+  border-radius: 4px;
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav-cta-btn {
+  white-space: nowrap;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--purple-900);
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+  background: var(--grad-hero);
+  padding: 4.5rem 0 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -80px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--purple-800);
+  border: 1px solid var(--pink-200);
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+  max-width: 540px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.stat-item h4 {
+  font-size: 1.75rem;
+  color: var(--purple-900);
+  margin-bottom: 0.15rem;
+}
+
+.stat-item p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Hero Visual & Interactive Quiz Preview */
+.hero-visual {
+  position: relative;
+}
+
+.hero-card-stack {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 2.2rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-pink);
+  position: relative;
+}
+
+.quiz-badge {
+  display: inline-block;
+  background: var(--pink-100);
+  color: var(--pink-600);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.quiz-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.quiz-opt-btn {
+  background: var(--purple-50);
+  border: 1.5px solid var(--purple-100);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: var(--transition-fast);
+}
+
+.quiz-opt-btn:hover,
+.quiz-opt-btn.selected {
+  background: var(--pink-50);
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+  transform: translateX(4px);
+}
+
+.quiz-result-box {
+  display: none;
+  background: var(--grad-soft-pink-purple);
+  border: 1px dashed var(--primary-purple);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.quiz-result-box h4 {
+  color: var(--purple-900);
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.quiz-result-box p {
+  font-size: 0.88rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Floating floating pills on Hero */
+.floating-pill {
+  position: absolute;
+  background: #ffffff;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-pink);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  z-index: 3;
+  animation: float 4s ease-in-out infinite;
+}
+
+.pill-1 {
+  top: -15px;
+  right: 20px;
+  animation-delay: 0s;
+}
+
+.pill-2 {
+  bottom: -20px;
+  left: -20px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Home Feature Cards (3-4 simple highlight cards)
+   ========================================================================== */
+.features-strip {
+  padding: 2.5rem 0 4rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  padding: 2rem 1.75rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--pink-200);
+}
+
+.feature-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: var(--pink-100);
+  color: var(--primary-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.feature-card:nth-child(2) .feature-icon-box {
+  background: var(--purple-100);
+  color: var(--primary-purple);
+}
+
+.feature-card:nth-child(3) .feature-icon-box {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.feature-card:nth-child(4) .feature-icon-box {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.feature-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   About Section
+   ========================================================================== */
+.about-section {
+  padding: 5.5rem 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-content h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.about-intro-lead {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--purple-900);
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  color: var(--text-sub);
+  margin-bottom: 1.5rem;
+  font-size: 0.98rem;
+}
+
+.about-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.pillar-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.pillar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--pink-100);
+  color: var(--primary-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.pillar-item h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.pillar-item p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.about-graphic-card {
+  background: var(--grad-soft-pink-purple);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  border: 1px solid var(--purple-100);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.quote-highlight {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary-pink);
+  margin-bottom: 1.75rem;
+}
+
+.quote-highlight p {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--purple-900);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.quote-highlight span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-pink);
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-box {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.stat-box .num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  color: var(--purple-600);
+}
+
+.stat-box .lbl {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Digital Skills Section (6 Key Modules)
+   ========================================================================== */
+.skills-section {
+  padding: 5.5rem 0;
+  background: var(--bg-main);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--purple-200);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.skill-icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.skill-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: var(--purple-50);
+  color: var(--purple-900);
+  border: 1px solid var(--purple-100);
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  transition: var(--transition-fast);
+}
+
+.skill-card:hover h3 {
+  color: var(--primary-pink);
+}
+
+.skill-card p {
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.skill-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.skill-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.skill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary-purple);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Business Resources & Calculator Section
+   ========================================================================== */
+.resources-section {
+  padding: 5.5rem 0;
+  background: #ffffff;
+}
+
+.resources-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.65rem 1.6rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: var(--purple-50);
+  color: var(--text-sub);
+  border: 1.5px solid var(--purple-100);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: var(--grad-pink-purple);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Resources Grid */
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.res-card {
+  background: var(--bg-card-alt);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.res-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--pink-200);
+}
+
+.res-card-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.res-icon {
+  font-size: 2rem;
+}
+
+.res-card h3 {
+  font-size: 1.25rem;
+}
+
+.res-snippet {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.res-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.res-list li {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.res-list li::before {
+  content: '✨';
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Interactive Calculator Container */
+.calculator-container {
+  background: var(--grad-soft-pink-purple);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  border: 1px solid var(--purple-200);
+  box-shadow: var(--shadow-md);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.calc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-group label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--purple-900);
+}
+
+.input-group input {
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--purple-200);
+  font-size: 1rem;
+  font-weight: 600;
+  background: #ffffff;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.input-group input:focus {
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+}
+
+.calc-results-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--pink-200);
+  box-shadow: var(--shadow-md);
+}
+
+.calc-results-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  color: var(--purple-900);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.6rem;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.result-row.highlight {
+  background: var(--pink-50);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+}
+
+.result-row.highlight .val {
+  color: var(--primary-pink);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.val {
+  font-weight: 700;
+  color: var(--purple-900);
+}
+
+/* ==========================================================================
+   Success Stories Section (3-4 sample stories)
+   ========================================================================== */
+.stories-section {
+  padding: 5.5rem 0;
+  background: var(--bg-main);
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.story-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 2.2rem;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+  position: relative;
+}
+
+.story-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--pink-200);
+}
+
+.story-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.story-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--grad-soft-pink-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  border: 2px solid var(--pink-200);
+}
+
+.story-meta h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.15rem;
+}
+
+.story-meta p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.story-badge {
+  display: inline-block;
+  background: var(--purple-100);
+  color: var(--purple-900);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.story-quote {
+  font-size: 0.94rem;
+  font-style: italic;
+  color: var(--text-sub);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.story-metric-badge {
+  background: var(--pink-50);
+  border: 1px solid var(--pink-200);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric-num {
+  font-weight: 800;
+  color: var(--primary-pink);
+  font-size: 1.05rem;
+}
+
+.metric-lbl {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.story-card .btn-story {
+  width: 100%;
+  background: var(--purple-50);
+  color: var(--purple-900);
+  border: 1px solid var(--purple-200);
+  padding: 0.65rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.story-card .btn-story:hover {
+  background: var(--primary-purple);
+  color: #ffffff;
+  border-color: var(--primary-purple);
+}
+
+/* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+.faq-section {
+  padding: 5.5rem 0;
+  background: #ffffff;
+}
+
+.faq-container {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition-fast);
+}
+
+.faq-item.active {
+  border-color: var(--purple-200);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  color: var(--text-main);
+  user-select: none;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  transition: transform var(--transition-fast);
+  color: var(--primary-purple);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: var(--primary-pink);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 0 1.5rem 1.25rem 1.5rem;
+}
+
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.contact-section {
+  padding: 5.5rem 0;
+  background: var(--grad-soft-pink-purple);
+  position: relative;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.contact-info h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1.02rem;
+}
+
+.contact-card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-pink);
+  box-shadow: var(--shadow-sm);
+}
+
+.info-item .info-icon {
+  font-size: 1.4rem;
+}
+
+.info-item h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.1rem;
+}
+
+.info-item p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* Form */
+.contact-form-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-pink);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--purple-900);
+  margin-bottom: 0.4rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-light);
+  font-size: 0.95rem;
+  color: var(--text-main);
+  background: var(--bg-main);
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--primary-pink);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.12);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* ==========================================================================
+   Newsletter Callout Banner
+   ========================================================================== */
+.newsletter-banner {
+  padding: 4rem 0;
+  background: var(--grad-purple-deep);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  margin: 3rem 0;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-content {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.newsletter-content h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.newsletter-content p {
+  color: var(--purple-100);
+  font-size: 1.05rem;
+  margin-bottom: 1.75rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex-grow: 1;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.newsletter-form button {
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  background: #1e1b4b;
+  color: #ede9fe;
+  padding: 4.5rem 0 2rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-brand .brand-logo {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--pink-200);
+  padding-left: 4px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #ffffff;
+  transition: var(--transition-fast);
+}
+
+.social-circle:hover {
+  background: var(--primary-pink);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   Modal Dialogs (Skill Details & Story Details)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-container {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--pink-200);
+  position: relative;
+  padding: 2.5rem;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--purple-50);
+  border: 1px solid var(--purple-100);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--purple-900);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background: var(--pink-100);
+  color: var(--primary-pink);
+  transform: rotate(90deg);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Toast Notifications */
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--purple-900);
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 3000;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border-left: 4px solid var(--primary-pink);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--grad-pink-purple);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-pink-glow);
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-normal);
+  z-index: 900;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .nav-container {
+    gap: 0.75rem;
+  }
+
+  .nav-menu {
+    gap: 0.95rem;
+  }
+
+  .nav-link {
+    font-size: 0.88rem;
+  }
+
+  .nav-cta-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 1040px) {
+  .nav-wrapper {
+    flex: 0 0 auto;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-150%);
+    transition: transform var(--transition-normal);
+    z-index: 999;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-grid,
+  .about-grid,
+  .calc-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-container {
+    padding: 1.5rem;
+  }
+
+  .calculator-container {
+    padding: 1.75rem;
+  }
+}
+
+/* ==========================================================================
+   Homemade Food Marketplace & Menu Styling
+   ========================================================================== */
+.food-menu-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #fff9fb 0%, #faf7fc 100%);
+  position: relative;
+}
+
+.food-menu-controls {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.food-categories-bar {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.food-cat-btn {
+  background: #ffffff;
+  color: var(--text-sub);
+  border: 1.5px solid var(--border-light);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.food-cat-btn:hover {
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+  transform: translateY(-2px);
+}
+
+.food-cat-btn.active {
+  background: var(--grad-pink-purple);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.3);
+}
+
+.food-search-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+}
+
+.search-input-wrapper .search-icon {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 3rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--purple-200);
+  background: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-main);
+  outline: none;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.search-input-wrapper input:focus {
+  border-color: var(--primary-pink);
+  box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.15);
+}
+
+/* Food Cards Grid */
+.food-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+.food-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-pink);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.food-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--purple-200);
+}
+
+.food-img-container {
+  position: relative;
+  width: 100%;
+  height: 205px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff1f2 0%, #f5f3ff 100%);
+}
+
+.food-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  display: block;
+}
+
+.food-card:hover .food-card-img {
+  transform: scale(1.07);
+}
+
+.food-emoji-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+}
+
+.food-badge-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.food-diet-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.diet-veg {
+  background: rgba(236, 253, 245, 0.95);
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.diet-eggless {
+  background: rgba(255, 251, 235, 0.95);
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.diet-jain {
+  background: rgba(240, 253, 244, 0.95);
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.food-tag-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--grad-pink-purple);
+  color: #ffffff;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.35);
+}
+
+/* Modal Food Hero Banner */
+.modal-food-hero-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fdf2f8, #ede9fe);
+}
+
+.modal-food-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-food-hero-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.modal-hero-badge-wrap {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Cart Item Thumb Box */
+.cart-item-thumb-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid var(--purple-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.food-card-body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-chef-line {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  margin-bottom: 0.5rem;
+}
+
+.food-chef-line strong {
+  color: var(--purple-900);
+}
+
+.chef-city-tag {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.food-title {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.food-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.food-portion-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border-light);
+  margin-bottom: 0.5rem;
+}
+
+.portion-badge {
+  font-size: 0.8rem;
+  color: var(--purple-800);
+  font-weight: 600;
+  background: var(--purple-50);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.rating-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.food-prep-row {
+  font-size: 0.78rem;
+  color: var(--primary-pink-hover);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Card Footer */
+.food-card-footer {
+  padding: 1rem 1.25rem;
+  background: #faf8fd;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.food-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+}
+
+.food-price-box .currency {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-pink);
+}
+
+.food-price-box .price-val {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--primary-pink);
+}
+
+.food-price-box .price-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: 0.2rem;
+}
+
+.food-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-whatsapp-order {
+  background: #25d366;
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp-order:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+.btn-food-view {
+  background: #ffffff;
+  color: var(--purple-800);
+  border: 1px solid var(--purple-200);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-food-view:hover {
+  background: var(--purple-100);
+  border-color: var(--purple-600);
+}
+
+/* Home Chef Join Banner */
+.chef-join-banner {
+  background: var(--grad-soft-pink-purple);
+  border: 2px dashed var(--pink-200);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.chef-banner-text h3 {
+  font-size: 1.45rem;
+  color: var(--purple-900);
+  margin-bottom: 0.4rem;
+}
+
+.chef-banner-text p {
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  max-width: 680px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .food-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chef-join-banner {
+    padding: 1.5rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .chef-banner-text p {
+    margin-bottom: 1rem;
+  }
+}
+
+/* ==========================================================================
+   Shopping Cart, Drawer & Checkout Styling
+   ========================================================================== */
+
+/* Nav Cart Button */
+.nav-cart-btn {
+  background: #ffffff;
+  border: 1.5px solid var(--purple-200);
+  color: var(--purple-900);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-cart-btn:hover {
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15);
+}
+
+.cart-btn-icon {
+  font-size: 1.1rem;
+}
+
+.cart-count-badge {
+  background: var(--primary-pink);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Floating Sticky Cart Button */
+.floating-cart-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--grad-pink-purple);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 0.85rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+  cursor: pointer;
+  z-index: 990;
+  transform: translateY(120px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.floating-cart-btn.visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.floating-cart-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.5);
+}
+
+.float-cart-count {
+  background: #ffffff;
+  color: var(--primary-pink-hover);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+/* Card Add to Cart / Qty Stepper Buttons */
+.btn-add-cart {
+  background: var(--primary-pink);
+  color: #ffffff;
+  border: none;
+  padding: 0.55rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  box-shadow: 0 3px 10px rgba(236, 72, 153, 0.3);
+}
+
+.btn-add-cart:hover {
+  background: var(--primary-pink-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.45);
+}
+
+.card-qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: var(--pink-100);
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-full);
+  padding: 0.2rem 0.4rem;
+  gap: 0.35rem;
+}
+
+.card-qty-btn {
+  background: #ffffff;
+  border: 1px solid var(--pink-200);
+  color: var(--pink-600);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.card-qty-btn:hover {
+  background: var(--pink-600);
+  color: #ffffff;
+}
+
+.card-qty-val {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--pink-600);
+  padding: 0 0.2rem;
+}
+
+/* Slide-out Cart Drawer Overlay */
+.cart-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-drawer {
+  width: 100%;
+  max-width: 460px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cart-drawer-overlay.active .cart-drawer {
+  transform: translateX(0);
+}
+
+.cart-drawer-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+}
+
+.cart-header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.cart-header-title span {
+  font-size: 1.4rem;
+}
+
+.cart-header-title h3 {
+  font-size: 1.25rem;
+  color: var(--purple-900);
+  margin: 0;
+}
+
+.cart-drawer-badge {
+  background: var(--pink-100);
+  color: var(--pink-600);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.cart-drawer-close {
+  background: #f1f5f9;
+  border: none;
+  color: #64748b;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.cart-drawer-close:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.cart-drawer-body {
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.cart-empty-state {
+  text-align: center;
+  padding: 3.5rem 1rem;
+}
+
+.cart-empty-state .empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.cart-empty-state h3 {
+  color: var(--purple-900);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cart-empty-state p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Free Delivery Banner */
+.cart-delivery-banner {
+  background: #fdf2f8;
+  border: 1px solid #fbcfe8;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--purple-900);
+}
+
+.cart-delivery-banner.unlocked {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
+.delivery-banner-icon {
+  font-size: 1.3rem;
+}
+
+/* Cart Items List */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem;
+  background: #faf7fc;
+  border-radius: 14px;
+  border: 1px solid var(--border-light);
+}
+
+.cart-item-emoji {
+  font-size: 2.2rem;
+  background: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--purple-100);
+}
+
+.cart-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-item-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-item-chef {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.cart-item-chef .price-unit {
+  color: var(--primary-pink);
+  font-weight: 700;
+}
+
+.cart-item-servings {
+  font-size: 0.72rem;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--purple-200);
+  border-radius: var(--radius-full);
+  padding: 0.15rem 0.35rem;
+}
+
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: var(--purple-800);
+  font-size: 0.95rem;
+  font-weight: 800;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.qty-btn:hover {
+  background: var(--purple-100);
+}
+
+.qty-val {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0 0.35rem;
+  min-width: 18px;
+  text-align: center;
+}
+
+.cart-item-total {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+  min-width: 48px;
+  text-align: right;
+}
+
+.cart-item-remove {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  opacity: 0.6;
+  transition: opacity var(--transition-fast);
+}
+
+.cart-item-remove:hover {
+  opacity: 1;
+}
+
+/* Kitchen Notes Card */
+.cart-notes-card {
+  background: #ffffff;
+  border: 1px solid var(--purple-200);
+  border-radius: 12px;
+  padding: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.cart-notes-card label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--purple-900);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.cart-notes-card textarea {
+  width: 100%;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 50px;
+  outline: none;
+}
+
+.cart-notes-card textarea:focus {
+  border-color: var(--primary-pink);
+}
+
+/* Cart Drawer Footer */
+.cart-drawer-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+  background: #ffffff;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.cart-bill-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+}
+
+.bill-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--text-sub);
+}
+
+.bill-row.total-row {
+  border-top: 1px dashed var(--border-light);
+  padding-top: 0.6rem;
+  margin-top: 0.2rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--purple-900);
+}
+
+.bill-row .total-price {
+  color: var(--primary-pink);
+  font-size: 1.35rem;
+}
+
+.cart-footer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.btn-whatsapp-cart {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.btn-whatsapp-cart:hover {
+  background: #25d366;
+  color: #ffffff;
+  border-color: #25d366;
+}
+
+/* Payment Method Cards in Checkout */
+.payment-method-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.payment-method-card:hover {
+  border-color: var(--purple-200);
+}
+
+.payment-method-card.active {
+  border-color: var(--primary-pink);
+  background: #fff9fb;
+}
+
+.payment-method-card input {
+  margin-top: 0.25rem;
+  accent-color: var(--primary-pink);
+}
+
+.pay-method-info strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  margin-bottom: 0.15rem;
+}
+
+.pay-method-info span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.upi-payment-box {
+  background: #faf7fc;
+  border: 1px dashed #ddd6fe;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.upi-mock-qr {
+  width: 76px;
+  height: 76px;
+  background: #ffffff;
+  border: 2px solid #ddd6fe;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Order Receipt Confirmation */
+.order-receipt-card {
+  background: #faf7fc;
+  border: 1px solid #ede9fe;
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.receipt-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #ddd6fe;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.receipt-chef-note {
+  background: #fdf2f8;
+  border-left: 3px solid #ec4899;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  color: #4c1d95;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.receipt-items-table {
+  border-bottom: 1px dashed #ddd6fe;
+  padding-bottom: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.receipt-item-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  margin-bottom: 0.45rem;
+}
+
+.receipt-delivery-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+@media (max-width: 480px) {
+  .cart-drawer {
+    max-width: 100%;
+  }
+
+  .nav-cart-btn .cart-btn-label {
+    display: none;
+  }
+}
+
+
+
+</style>
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20100%22><text y=%22.9em%22 font-size=%2290%22>🍲</text></svg>">
 </head>
@@ -628,7 +3481,2240 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
   <!-- Scripts -->
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+  <script>
+// Data store specifically tailored for Home Women Food Entrepreneurs
+// Homemade Food, Cloud Kitchens, Bakers, Tiffins, Pickles & Regional Delicacies
+
+const SKILLS_DATA = [
+  {
+    id: "food-reels",
+    icon: "🍲",
+    title: "Food Styling & Reel Marketing",
+    category: "Marketing & Growth",
+    shortDesc: "Capture mouthwatering sizzles, ASMR cooking clips, and design festive food menus on Canva to attract hungry local buyers.",
+    gradient: "linear-gradient(135deg, #f43f5e, #ec4899)",
+    readTime: "7 min guide",
+    difficulty: "Beginner Friendly",
+    fullDetails: {
+      overview: "People eat with their eyes first! Short, sizzling videos showing fresh ingredients, clean cooking spaces, and appetizing plating generate instant orders in your neighbourhood.",
+      keyTopics: [
+        {
+          heading: "1. The 3 Videos That Always Convert Hungry Viewers",
+          content: "1) Sizzling ASMR cooking/baking process, 2) Fresh hot packing in tamper-proof boxes, 3) Satisfied customer tasting reactions and review screenshots."
+        },
+        {
+          heading: "2. Designing Daily & Festive Digital Menus in Canva",
+          content: "Use free Canva food menu templates to create colorful weekly lunch schedules, festive Diwali/Eid sweet hampers, or weekend special menus with clear prices."
+        },
+        {
+          heading: "3. Hyper-Local Neighbourhood Hashtags & Groups",
+          content: "Tag your exact residential areas (#KothrudBakers, #BandraHomeChefs, #WhitefieldFoodies) and share weekly special menus on local residential society WhatsApp/Facebook groups."
+        },
+        {
+          heading: "4. Building Trust with Kitchen Hygiene Highlights",
+          content: "Showcase clean stainless steel workstations, hairnets, gloves, and fresh market grocery shopping to reassure health-conscious customers."
+        }
+      ],
+      freeTools: [
+        { name: "Canva Free", purpose: "Design mouthwatering weekly menus & price cards" },
+        { name: "CapCut / VN Video Editor", purpose: "Add trending culinary music and slow-mo sizzling effects" },
+        { name: "Meta Business Suite", purpose: "Schedule lunch special posts every morning automatically" }
+      ],
+      actionChecklist: [
+        "Record a 15-second video showing your kitchen prep and steaming hot food",
+        "Design a 1-page weekly menu card using Canva with your WhatsApp order link",
+        "Post a 'Today's Fresh Special' story on Instagram and WhatsApp Status before 11:00 AM",
+        "Offer 5 complimentary mini tasting samples to influential neighbours in your building"
+      ]
+    }
+  },
+  {
+    id: "digital-menu-site",
+    icon: "📱",
+    title: "Creating a Digital Food Menu & Website",
+    category: "Digital Ordering",
+    shortDesc: "Build your own online ordering website or digital catalog with zero platform commissions and direct WhatsApp checkout.",
+    gradient: "linear-gradient(135deg, #8b5cf6, #6366f1)",
+    readTime: "9 min guide",
+    difficulty: "No-Code Required",
+    fullDetails: {
+      overview: "Avoid losing 25%–35% of your hard-earned margins to food aggregator commissions. Build an owned digital menu where customers order directly from you.",
+      keyTopics: [
+        {
+          heading: "1. No-Code Digital Menu Platforms",
+          content: "Use free tools like Dukaan, Swiggy Minis, Google Sites, or WhatsApp Business Catalogs to list your food items with portion sizes, prices, and allergen tags."
+        },
+        {
+          heading: "2. Pre-Order & Slot-Based Scheduling",
+          content: "Avoid food wastage by setting up a 'Pre-order 24 hours in advance' rule or 'Order before 10 AM for Lunch Delivery' system on your page."
+        },
+        {
+          heading: "3. Essential Food Menu Details",
+          content: "Include portion size (e.g., 'Serves 2-3 | 500g'), Spice Level (Mild / Medium / Spicy), Veg/Non-Veg indicators, and clear delivery radius."
+        },
+        {
+          heading: "4. Easy Delivery Integration",
+          content: "Integrate on-demand intra-city delivery services like Dunzo, Borzo, Porter, or Swiggy Genie for reliable doorstep dispatches."
+        }
+      ],
+      freeTools: [
+        { name: "WhatsApp Business Catalog", purpose: "Instant zero-cost mobile food catalog" },
+        { name: "Google Forms / Tally.so", purpose: "Accept custom catering and weekend bulk pre-orders" },
+        { name: "TinyPNG", purpose: "Compress appetizing food photos so your menu opens instantly" }
+      ],
+      actionChecklist: [
+        "Create a clean digital menu with top 6 signature dishes and portion sizes",
+        "Set up clear delivery time slots (Lunch: 12:30–2 PM, Dinner: 7:30–9 PM)",
+        "Write clear heating / storage instructions for each dish",
+        "Add a direct 'Click to Order via WhatsApp' button on your menu"
+      ]
+    }
+  },
+  {
+    id: "digital-payments-food",
+    icon: "💳",
+    title: "Advance UPI Payments & Invoicing",
+    category: "Finance & Operations",
+    shortDesc: "Eliminate food wastage from last-minute cancellations by taking advance UPI deposits and generating instant receipts.",
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)",
+    readTime: "6 min guide",
+    difficulty: "Essential",
+    fullDetails: {
+      overview: "Homemade food is perishable. A strict advance payment policy ensures you never buy raw materials or prepare meals that end up unpaid.",
+      keyTopics: [
+        {
+          heading: "1. The 100% / 50% Advance Booking Rule",
+          content: "For customized cakes, party platters, and weekly tiffin meal plans, mandate 100% advance or a minimum 50% deposit before turning on the stove."
+        },
+        {
+          heading: "2. Dedicated Business UPI & Soundbox",
+          content: "Set up Google Pay Business or Paytm for Business to avoid mixing household grocery money with food enterprise revenues."
+        },
+        {
+          heading: "3. Professional Digital Invoicing",
+          content: "Send instant PDF receipts with your food business logo, itemized bill, delivery charges, and payment timestamp using Khatabook or Vyapar."
+        },
+        {
+          heading: "4. Subscription Billing for Daily Tiffins",
+          content: "Set up monthly or 15-day recurring payment links for office workers and students taking daily homemade lunch/dinner."
+        }
+      ],
+      freeTools: [
+        { name: "Google Pay / PhonePe Business", purpose: "Instant soundbox & merchant QR code" },
+        { name: "Razorpay Payment Links", purpose: "Send debit/credit card links for large party catering" },
+        { name: "Khatabook / Vyapar", purpose: "Track customer balances and recurring tiffin accounts" }
+      ],
+      actionChecklist: [
+        "Print a branded QR code stand with your food venture name & phone number",
+        "Set a polite WhatsApp deposit message: 'Order is confirmed once advance payment is received'",
+        "Create a simple monthly spreadsheet or app ledger to track ingredient purchases vs sales",
+        "Send digital receipts for all bulk orders exceeding ₹1,000"
+      ]
+    }
+  },
+  {
+    id: "whatsapp-food-business",
+    icon: "💬",
+    title: "WhatsApp Business for Food Orders",
+    category: "Order Management",
+    shortDesc: "Automate daily menu broadcasts, quick replies for prices, and manage active tiffin subscriptions effortlessly.",
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)",
+    readTime: "8 min guide",
+    difficulty: "Beginner Friendly",
+    fullDetails: {
+      overview: "Over 90% of home food orders in residential areas happen over WhatsApp. Turning your WhatsApp into a high-speed ordering desk saves hours of typing.",
+      keyTopics: [
+        {
+          heading: "1. Quick Replies for Common Inquiries",
+          content: "Save shortcuts: '/menu' for today's dishes, '/price' for tiffin rates, '/delivery' for delivery areas and timing, '/pay' for your UPI QR link."
+        },
+        {
+          heading: "2. Smart Customer Color Labels",
+          content: "Tag chats: 'Daily Tiffin - Paid', 'Daily Tiffin - Pending', 'Weekend Party Order', 'Diet / Low Salt Special', 'Cake Order Completed'."
+        },
+        {
+          heading: "3. Daily Morning Broadcast Lists",
+          content: "Send a fresh morning menu broadcast to opt-in subscribers at 9:00 AM with 2 clicks without annoying group spam."
+        },
+        {
+          heading: "4. Automated Greeting & Away Status",
+          content: "Inform customers about kitchen operating hours: 'Thank you for reaching Annapurna Kitchen! Lunch bookings close at 11 AM. Reply with 1 to see today's menu.'"
+        }
+      ],
+      freeTools: [
+        { name: "WhatsApp Business App", purpose: "Labels, automated away messages & full food catalog" },
+        { name: "wa.me Link Generator", purpose: "Create 'Order on WhatsApp' links for your Instagram bio" },
+        { name: "Google Keep", purpose: "Keep daily order prep lists synced across devices" }
+      ],
+      actionChecklist: [
+        "Switch to WhatsApp Business and complete your Food Profile & Kitchen hours",
+        "Upload your signature dishes, thalis, or bakery hampers into WhatsApp Catalog",
+        "Configure 4 essential Quick Replies (/menu, /tiffin, /payment, /location)",
+        "Organize existing food buyers into an opt-in 'VIP Foodie Broadcast List'"
+      ]
+    }
+  },
+  {
+    id: "food-photography",
+    icon: "📸",
+    title: "Smartphone Food Photography & Plating",
+    category: "Visual Branding",
+    shortDesc: "Shoot irresistible food pictures using natural window light, rustic garnishes, and clean packaging angles.",
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)",
+    readTime: "7 min guide",
+    difficulty: "Creative & Practical",
+    fullDetails: {
+      overview: "Steaming hot food with fresh green coriander, golden tempering, or dripping chocolate sauce captures attention faster than words. Master smartphone lighting in 3 steps.",
+      keyTopics: [
+        {
+          heading: "1. Natural Side Window Lighting",
+          content: "Place your plate on a table near a bright window with light coming from the side (90° or 45°). Side light highlights textures, cheese pulls, and gravies beautifully."
+        },
+        {
+          heading: "2. Garnish Right Before the Click",
+          content: "Add fresh cilantro, roasted sesame, fresh mint, or a swirl of fresh cream right before snapping. Food looks freshest within 2 minutes of plating."
+        },
+        {
+          heading: "3. Top-Down (Flat Lay) vs 45-Degree Angle",
+          content: "Use top-down 90° for full Thali meals, pizza boxes, and dessert boxes. Use 45° for tall layered cakes, biryani bowls, and beverages."
+        },
+        {
+          heading: "4. Showcasing Tamper-Proof Packaging",
+          content: "Take photos of your food safely sealed in hygienic spill-proof foil containers with your brand sticker. This reassures buyers about safety."
+        }
+      ],
+      freeTools: [
+        { name: "Snapseed (Google)", purpose: "Enhance warm tones, boost food vibrance, and clean shadows" },
+        { name: "Lightroom Mobile (Free)", purpose: "Warm food presets that make gravies look rich and fresh" },
+        { name: "Phone Gridlines", purpose: "Keep plates centered and straight" }
+      ],
+      actionChecklist: [
+        "Clean your camera lens with a soft cloth before photographing food",
+        "Buy 2 wooden serving boards, banana leaves, or clean ceramic bowls as photo props",
+        "Take both a 'plated dish' photo and a 'ready-to-deliver packed box' photo",
+        "Edit with gentle warmth (+10 warmth, +5 contrast) in Snapseed"
+      ]
+    }
+  },
+  {
+    id: "fssai-hygiene-safety",
+    icon: "🔒",
+    title: "FSSAI Registration & Food Hygiene",
+    category: "Safety & Legal",
+    shortDesc: "Step-by-step guidance on basic FSSAI registration (₹100/yr), safe packaging, allergen disclosures, and building trust.",
+    gradient: "linear-gradient(135deg, #10b981, #059669)",
+    readTime: "8 min guide",
+    difficulty: "Essential Trust",
+    fullDetails: {
+      overview: "Operating legally with basic food registration and strict hygiene standards sets you apart from amateur kitchens and allows you to supply to corporate offices and schools.",
+      keyTopics: [
+        {
+          heading: "1. Basic FSSAI Registration (Under ₹12 Lakh Annual Turnover)",
+          content: "Home kitchens only need the basic FSSAI Registration (Form A) which costs ₹100/year and can be applied online in 15 minutes with your Aadhaar card and photo."
+        },
+        {
+          heading: "2. Food Grade Packaging & Sealing",
+          content: "Always use food-grade aluminum foil containers, leak-proof PP containers, and paper bags. Use tamper-evident seal stickers with your brand logo."
+        },
+        {
+          heading: "3. Allergy & Ingredient Disclosures",
+          content: "Clearly mention common allergens: 'Contains Nuts / Dairy / Gluten' on product labels, especially for baked goods and spice mixes."
+        },
+        {
+          heading: "4. Shelf Life & Storage Instructions",
+          content: "Include stickers: 'Consume within 4 hours of delivery' for hot meals, or 'Refrigerate immediately | Best before 3 days' for fresh sweets and gravies."
+        }
+      ],
+      freeTools: [
+        { name: "FSSAI FoSCoS Portal", purpose: "Official online portal for basic home food registration" },
+        { name: "Canva Label Templates", purpose: "Design food ingredient, expiry & FSSAI number stickers" },
+        { name: "Google Keep / Notes", purpose: "Maintain ingredient batch dates and purchase receipts" }
+      ],
+      actionChecklist: [
+        "Apply for Basic FSSAI Registration on the FoSCoS government portal",
+        "Order 100 printed sticker labels with your brand name, phone number & FSSAI number",
+        "Establish daily kitchen sanitization protocol and food temperature storage rules",
+        "Add a 'Hygiene & Clean Kitchen Promise' highlight on your social media"
+      ]
+    }
+  }
+];
+
+const SUCCESS_STORIES = [
+  {
+    id: "aajis-pickles",
+    founder: "Sunita Deshmukh",
+    business: "Aaji’s Handmade Pickles & Masalas",
+    location: "Pune, Maharashtra",
+    category: "Traditional Pickles & Spices",
+    tagline: "Grandmother's heirloom mango & chili pickle recipes shipped across India",
+    badge: "Pickles & Spices",
+    avatar: "👵",
+    stats: {
+      revenueGrowth: "600+ Jars / Month",
+      monthlyOrders: "₹1.4L Monthly Income",
+      timeframe: "10 Months Online"
+    },
+    quote: "“I started sharing short video clips of grinding whole spices by hand on the stone mortar. Customers instantly fell in love with the pure traditional taste. WhatsApp catalog made order booking so easy!”",
+    story: "Sunita had been making seasonal mango, lemon, and green chili pickles for relatives for 25 years. With her daughter's help, she created an Instagram page showing traditional sun-drying and cold-pressed mustard oil curing. By setting up basic FSSAI registration and a WhatsApp Business catalog, she expanded from 10 family orders to supplying gourmet food stores and shipping pan-India.",
+    keyLearnings: [
+      "Traditional handmade authenticity and zero preservatives was her biggest selling point",
+      "Advance UPI payments allowed her to buy seasonal raw mangoes in bulk at wholesale rates",
+      "Offered 3-jar mini festive gift hampers during Diwali, generating 220 orders in 2 weeks"
+    ]
+  },
+  {
+    id: "wholesome-tiffins",
+    founder: "Rupal Joshi",
+    business: "Ghar Ka Swad Tiffin Service",
+    location: "Ahmedabad, Gujarat",
+    category: "Daily Healthy Meals",
+    tagline: "Homestyle Gujarati & North Indian lunchboxes for office professionals and students",
+    badge: "Daily Tiffin Service",
+    avatar: "👩‍🍳",
+    stats: {
+      revenueGrowth: "85 Daily Subscribers",
+      monthlyOrders: "2,200+ Meals / Month",
+      timeframe: "1 Year Online"
+    },
+    quote: "“Office workers were tired of oily restaurant food. My clean, low-oil rotis and daily rotating vegetable menu became a hit when I shared our daily lunch prep reels on society groups.”",
+    story: "Rupal started with just 5 lunchboxes for nearby software engineers. She created a Canva weekly menu chart with rotating sabzis, dal, and warm rotis. Using WhatsApp Business labels, she easily tracks active subscriptions, dietary preferences (like Jain or low salt), and automated month-end renewals.",
+    keyLearnings: [
+      "Prepaid monthly subscriptions guaranteed steady, predictable cash flow on the 1st of every month",
+      "Partnered with a local delivery runner for synchronized 12:45 PM hot lunchtime deliveries",
+      "Used leak-proof 4-compartment microwave-safe containers to prevent spills completely"
+    ]
+  },
+  {
+    id: "sweet-crumbles",
+    founder: "Aanya Sharma",
+    business: "Sweet Whisk Home Bakery",
+    location: "Bengaluru, Karnataka",
+    category: "Artisanal Baking & Cakes",
+    tagline: "Custom eggless celebration cakes, brownies, and festive dessert hampers",
+    badge: "Custom Home Bakery",
+    avatar: "🧁",
+    stats: {
+      revenueGrowth: "4x Weekend Bookings",
+      monthlyOrders: "120+ Designer Cakes",
+      timeframe: "8 Months"
+    },
+    quote: "“Natural window light photography transformed my ₹800 eggless chocolate truffle cakes into luxury celebration centerpieces. My weekend slots now get booked out 5 days in advance!”",
+    story: "Aanya turned her love for baking into a premium home bakery. Instead of waiting for walk-in orders, she posted 15-second ASMR cake frosting and floral piping reels on Instagram. By requiring a 100% advance UPI deposit for customized cakes, she eliminated cancellation losses entirely and now conducts weekend baking workshops.",
+    keyLearnings: [
+      "Short satisfying cake decoration reels attracted birthday party planners across the city",
+      "Strict 48-hour pre-order window gave adequate time for ingredient procurement without stress",
+      "Custom branded cake boxes with gold foil stickers elevated perceived value significantly"
+    ]
+  },
+  {
+    id: "zaika-dawat",
+    founder: "Fatima Begum",
+    business: "Zaika Dawat Cloud Kitchen",
+    location: "Hyderabad, Telangana",
+    category: "Biryani & Weekend Party Platters",
+    tagline: "Slow-cooked authentic Dum Biryani, kebabs, and party feast boxes",
+    badge: "Party Platters & Feasts",
+    avatar: "🥘",
+    stats: {
+      revenueGrowth: "₹2.8L Monthly GMV",
+      monthlyOrders: "45+ Bulk Weekend Orders",
+      timeframe: "1.5 Years"
+    },
+    quote: "“Direct WhatsApp ordering saved me ₹40,000 every month in aggregator commissions. Customers get piping hot food straight from my copper handi at honest prices.”",
+    story: "Fatima was famous in her locality for her slow-cooked wood-fired Dum Biryani and Haleem. By launching an easy-to-use digital menu and accepting weekend party pre-orders via WhatsApp, she transitioned from home cooking to running a dedicated home cloud kitchen employing two local women.",
+    keyLearnings: [
+      "Focused heavily on high-margin weekend family combo packs (Biryani + Kebabs + Sweet)",
+      "Collected video testimonials from society family gatherings to build social proof",
+      "Maintained strict FSSAI compliance and temperature-controlled insulated delivery bags"
+    ]
+  }
+];
+
+const BUSINESS_RESOURCES = [
+  {
+    title: "10 High-Demand Homemade Food Business Ideas",
+    category: "Food Business Ideas",
+    icon: "🍱",
+    readTime: "5 min read",
+    snippet: "Lucrative home food ventures you can launch from your existing kitchen with low initial investment.",
+    items: [
+      "Healthy Daily Office & Student Lunchbox Tiffins (Low-oil, Homestyle)",
+      "Artisanal Eggless Celebration Cakes, Brownies & Tea Cakes",
+      "Handmade Pickles, Chutneys, Podis & Masala Powders",
+      "Regional Festive Sweets & Dry Fruit Hampers (Diwali, Eid, Rakhi)",
+      "Millet-Based Healthy Snacks & Guilt-Free Cookies",
+      "Weekend Bulk Party Platters (Biryani, Lasagna, Chaat Kits)",
+      "Post-Partum (Mother & Baby) Traditional Nutrition Laddoos & Soups"
+    ]
+  },
+  {
+    title: "Zero-Cost Food Marketing Playbook for Home Chefs",
+    category: "Marketing Tips",
+    icon: "📢",
+    readTime: "7 min read",
+    snippet: "How to get your first 50 repeat food customers in your apartment society and neighbourhood.",
+    items: [
+      "Host a 'Sunday Tasting Table' in your apartment lobby with mini bite-sized samples",
+      "Post daily 'Kitchen Live Prep' stories on WhatsApp Status before 10:30 AM",
+      "Offer a 'Refer a Colleague' ₹100 discount coupon on monthly tiffin renewals",
+      "Partner with nearby local dry-cleaners or salons to display your festive food flyers",
+      "Create festive pre-order countdowns with early-bird booking discounts"
+    ]
+  },
+  {
+    title: "Home Food Packaging, Delivery & Hygiene Checklist",
+    category: "Packaging & Safety",
+    icon: "📦",
+    readTime: "6 min read",
+    snippet: "Essential guidelines to ensure food arrives piping hot, fresh, and spill-free every single time.",
+    items: [
+      "Use food-grade microwave-safe PP containers with airtight leak-proof lids",
+      "Apply branded tamper-evident seal stickers across the lid opening",
+      "Keep insulated thermal carrier bags for hot biryanis, rotis, and gravies",
+      "Tie up with on-demand local intra-city delivery runners (Dunzo / Porter / Borzo)",
+      "Always include printed reheating, refrigeration, and allergen cards inside the delivery bag"
+    ]
+  }
+];
+
+const FAQ_DATA = [
+  {
+    question: "Do I need an FSSAI license to sell homemade food from my kitchen?",
+    answer: "Yes, even small home kitchens making food need a basic 'FSSAI Registration' (Form A) if annual turnover is under ₹12 Lakhs. It costs only ₹100 per year, requires just your Aadhaar card and photo, and can be completed online in 15 minutes. It builds immense trust with customers."
+  },
+  {
+    question: "How do I prevent food wastage and last-minute order cancellations?",
+    answer: "Never begin cooking custom cakes or party platters without a 50% to 100% advance deposit via UPI. For daily tiffins, sell 15-day or 30-day prepaid meal passes with a strict 'Inform by 9:00 AM for lunch cancellation' policy."
+  },
+  {
+    question: "How should I price my homemade food so that I actually make a good profit?",
+    answer: "Use the 3x Rule: Raw Ingredients Cost × 3 (1/3 for ingredients, 1/3 for packaging/utilities/delivery, 1/3 for your hard-earned labor & profit). Never underprice yourself just to compete with low-quality roadside stalls. Homemade hygiene is premium!"
+  },
+  {
+    question: "How do I deliver hot food to customers across the city without owning a delivery fleet?",
+    answer: "You don't need your own delivery vehicles! Use intra-city on-demand delivery apps like Borzo, Porter, Dunzo, or Swiggy Genie. You can add the exact delivery fee to the customer's bill or offer free delivery on orders above ₹800."
+  }
+];
+
+const QUIZ_QUESTIONS = [
+  {
+    id: 1,
+    question: "What type of homemade food do you specialize in or want to sell?",
+    options: [
+      { text: "Daily Lunch & Dinner Tiffins for Offices / Students", skill: "whatsapp-food-business", recommendation: "Set up WhatsApp Business automated menus, subscription tags, and prepaid lunch passes!" },
+      { text: "Custom Cakes, Cupcakes & Baked Confectionery", skill: "food-photography", recommendation: "Master warm smartphone lighting, ASMR frosting reels, and custom cake pre-orders!" },
+      { text: "Traditional Pickles, Masalas, Podis & Dry Snacks", skill: "fssai-hygiene-safety", recommendation: "Get basic FSSAI registration, airtight tamper-proof jars, and pan-India parcel shipping!" },
+      { text: "Biryani, Regional Specialties & Weekend Party Feasts", skill: "digital-menu-site", recommendation: "Build a zero-commission digital menu with slot-based advance booking!" }
+    ]
+  },
+  {
+    id: 2,
+    question: "What is your biggest daily challenge in running your food business?",
+    options: [
+      { text: "Getting more food orders from my local area & societies", skill: "food-reels", recommendation: "Post daily steaming food reels, Canva weekly menus, and host apartment tasting samples." },
+      { text: "Managing inquiries, daily orders and payment follow-ups", skill: "whatsapp-food-business", recommendation: "Use WhatsApp quick replies (/menu, /pricing) and automated greeting messages." },
+      { text: "Customers canceling orders after food is already cooked", skill: "digital-payments-food", recommendation: "Implement a strict 100% or 50% advance UPI deposit rule before turning on the stove." },
+      { text: "Making food photos look as delicious as they actually taste", skill: "food-photography", recommendation: "Use natural side-window light, fresh coriander garnishes, and clean plating props." }
+    ]
+  },
+  {
+    id: 3,
+    question: "How do you currently take orders and payments from food customers?",
+    options: [
+      { text: "Cash on delivery or manual phone calls", skill: "digital-payments-food", recommendation: "Switch to dedicated Merchant UPI QR codes & advance booking links for guaranteed income." },
+      { text: "Personal WhatsApp chats and personal UPI", skill: "whatsapp-food-business", recommendation: "Upgrade to WhatsApp Business for catalogs, quick replies, and customer labels." },
+      { text: "Listing on food delivery aggregator apps", skill: "digital-menu-site", recommendation: "Save 30% commission fees by creating your own direct digital menu with local courier tie-ups." },
+      { text: "Just planning to start from my home kitchen", skill: "fssai-hygiene-safety", recommendation: "Start with basic ₹100 FSSAI registration, 5 signature dishes, and society tasting samples!" }
+    ]
+  }
+];
+
+const HOMEMADE_FOOD_ITEMS = [
+  {
+    id: "food-tiffin-gujarati",
+    name: "Ghar Ki Shuddh Gujarati Thali",
+    category: "tiffins",
+    categoryName: "Daily Homestyle Tiffins",
+    chefName: "Rupal Ben Joshi",
+    chefCity: "Ahmedabad, Gujarat",
+    chefAvatar: "👩‍🍳",
+    chefExperience: "14 yrs home cooking",
+    price: 140,
+    servings: "1 Full Meal (Serves 1-2)",
+    diet: "veg",
+    dietLabel: "100% Pure Veg (Jain available)",
+    rating: "4.9 ★ (120+ reviews)",
+    imageEmoji: "🍱",
+    image: "images/gujarati_thali.jpg",
+    badge: "Bestseller Tiffin",
+    prepNotice: "Fresh Hot Daily • Order before 10:30 AM",
+    description: "Wholesome, low-oil everyday meal cooked fresh daily morning: 4 warm soft Phulkas with pure Desi Ghee, Dal Fry/Kadhi, Seasonal Sabzi, Steamed Basmati Rice, Homemade Pickle & Salad.",
+    ingredients: ["Sharbati Wheat Flour", "Toor Dal", "Cold-pressed Peanut Oil", "Desi Gir Cow Ghee", "Fresh Market Vegetables", "Cumin & Mustard"],
+    storageInstructions: "Serve piping hot. Microwave friendly container. Consume within 4 hours.",
+    whatsappNumber: "919876543210"
+  },
+  {
+    id: "food-pickle-mango",
+    name: "Aaji's Heirloom Kachi Keri Mango Pickle",
+    category: "pickles",
+    categoryName: "Grandmother's Pickles & Masalas",
+    chefName: "Sunita Deshmukh",
+    chefCity: "Pune, Maharashtra",
+    chefAvatar: "👵",
+    chefExperience: "28 yrs traditional recipe",
+    price: 260,
+    servings: "500g Glass / Airtight Jar",
+    diet: "veg",
+    dietLabel: "100% Pure Veg & Preservative Free",
+    rating: "5.0 ★ (340+ jars shipped)",
+    imageEmoji: "🏺",
+    image: "images/mango_pickle.jpg",
+    badge: "Traditional Heirloom",
+    prepNotice: "Sun-Cured Batch • Ready to Ship",
+    description: "Sun-dried Rajapuri raw mangoes steeped in cold-pressed wood-pressed mustard oil, hand-ground fenugreek seeds, yellow mustard, and Kashmiri chili. No artificial preservatives or vinegar added.",
+    ingredients: ["Raw Rajapuri Mangoes", "Cold-Pressed Mustard Oil", "Hand-ground Fenugreek (Methi Kuria)", "Hing (Asafoetida)", "Rock Salt", "Turmeric"],
+    storageInstructions: "Store in a cool dry place. Always use a dry clean wooden or steel spoon. Shelf life: 12 Months.",
+    whatsappNumber: "919876543210"
+  },
+  {
+    id: "food-cake-chocolate",
+    name: "Eggless Belgian Dark Truffle Cake",
+    category: "bakes",
+    categoryName: "Fresh Home Bakes & Cakes",
+    chefName: "Aanya Sharma",
+    chefCity: "Bengaluru, Karnataka",
+    chefAvatar: "🧁",
+    chefExperience: "Artisanal Home Baker",
+    price: 650,
+    servings: "500g / 1 Pound (Serves 4-6)",
+    diet: "eggless",
+    dietLabel: "100% Eggless & Freshly Baked",
+    rating: "4.95 ★ (85+ cakes)",
+    imageEmoji: "🎂",
+    image: "images/chocolate_cake.jpg",
+    badge: "Party Favorite",
+    prepNotice: "Baked Fresh on Order • 6 hrs advance notice",
+    description: "Decadent, moist eggless sponge layered with 55% rich Belgian dark chocolate ganache and chocolate curls. Baked in small home batches with real butter and zero commercial cake premixes.",
+    ingredients: ["Organic Flour", "Dutch Cocoa Powder", "55% Dark Belgian Chocolate", "Pure Dairy Cream", "Unsalted Butter", "Cane Sugar"],
+    storageInstructions: "Keep refrigerated. Bring to room temperature 15 minutes before cutting for melt-in-mouth texture.",
+    whatsappNumber: "919876543210"
+  },
+  {
+    id: "food-sweets-laddoo",
+    name: "Pure Desi Ghee Besan & Dryfruit Laddoos",
+    category: "sweets",
+    categoryName: "Festive Sweets & Snacks",
+    chefName: "Shobha Tai Kulkarni",
+    chefCity: "Nashik, Maharashtra",
+    chefAvatar: "🪔",
+    chefExperience: "Specialist Festive Maker",
+    price: 380,
+    servings: "500g Box (12-14 pieces)",
+    diet: "veg",
+    dietLabel: "100% Pure Desi Ghee",
+    rating: "4.9 ★ (210+ boxes)",
+    imageEmoji: "🟡",
+    image: "images/besan_laddoo.jpg",
+    badge: "Mouth Melting",
+    prepNotice: "Handcrafted Fresh • 24 hrs pre-order",
+    description: "Slow-roasted coarse Gram flour (Danedar Besan) simmered in pure golden Cow Ghee for 45 minutes till aromatic, laced with green cardamom, roasted almonds, cashews, and pistachios.",
+    ingredients: ["Coarse Gram Flour (Chana Besan)", "Pure Cow Desi Ghee", "Cardamom (Elaichi) Powder", "Roasted Cashews", "Almonds", "Boora Sugar"],
+    storageInstructions: "Store at room temperature in airtight box. Shelf life: 30 days.",
+    whatsappNumber: "919876543210"
+  },
+  {
+    id: "food-special-biryani",
+    name: "Dawat Dum Handi Biryani (Veg / Paneer)",
+    category: "special",
+    categoryName: "Weekend Party Feasts",
+    chefName: "Fatima Begum",
+    chefCity: "Hyderabad, Telangana",
+    chefAvatar: "🥘",
+    chefExperience: "Traditional Nizam Kitchen",
+    price: 320,
+    servings: "Serves 2-3 Generously (850g) + Mirchi Ka Salan & Raita",
+    diet: "veg",
+    dietLabel: "Clay Handi Slow Cooked",
+    rating: "5.0 ★ (180+ weekend feasts)",
+    imageEmoji: "🍲",
+    image: "images/dum_biryani.jpg",
+    badge: "Weekend Special",
+    prepNotice: "Slow Woodfire Dum • Order 4 hrs prior",
+    description: "Authentic slow-dum cooked Biryani layered with long-grain aged Basmati rice, marinated cottage cheese/vegetables, saffron milk, caramelized brown onions (birista), and whole Mughlai spices in a clay pot.",
+    ingredients: ["Aged Basmati Rice", "Fresh Malai Paneer", "Pure Kashmiri Saffron", "Caramelized Onions", "Desi Ghee", "Whole Shahi Spices"],
+    storageInstructions: "Delivered hot in sealed clay handi / insulated pack. Reheat with covered lid for 2 mins.",
+    whatsappNumber: "919876543210"
+  },
+  {
+    id: "food-snack-thepla",
+    name: "Fresh Methi Thepla & Sweet Chhundo Pack",
+    category: "sweets",
+    categoryName: "Festive Sweets & Snacks",
+    chefName: "Kavita Patel",
+    chefCity: "Surat, Gujarat",
+    chefAvatar: "👩‍🍳",
+    chefExperience: "Travel Food Specialist",
+    price: 180,
+    servings: "Pack of 10 Soft Theplas + 100g Chhundo",
+    diet: "veg",
+    dietLabel: "Travel Friendly (Lasts 4 days)",
+    rating: "4.85 ★ (95+ reviews)",
+    imageEmoji: "🥞",
+    image: "images/methi_thepla.jpg",
+    badge: "Travel & Snack Favorite",
+    prepNotice: "Fresh Tawa Roasted Daily",
+    description: "Paper-thin, ultra-soft Theplas made with fresh garden fenugreek leaves, sesame seeds, turmeric, and ajwain. Accompanied by homemade sweet grated mango Chhundo. Perfect for breakfast or travel.",
+    ingredients: ["Whole Wheat Flour", "Fresh Fenugreek (Methi) Leaves", "White Sesame (Til)", "Ajwain", "Turmeric & Hing", "Cold-Pressed Peanut Oil"],
+    storageInstructions: "Vacuum/foil sealed. Remains soft for 4-5 days without refrigeration. Ideal for office & travel.",
+    whatsappNumber: "919876543210"
+  },
+  {
+    id: "food-pickle-gongura",
+    name: "Authentic Andhra Spicy Gongura & Garlic Pickle",
+    category: "pickles",
+    categoryName: "Grandmother's Pickles & Masalas",
+    chefName: "Meenakshi Sundaram",
+    chefCity: "Vijayawada, Andhra Pradesh",
+    chefAvatar: "👵",
+    chefExperience: "32 yrs spice craft",
+    price: 240,
+    servings: "400g Airtight Jar",
+    diet: "veg",
+    dietLabel: "Fiery Traditional Andhra Taste",
+    rating: "4.9 ★ (150+ jars)",
+    imageEmoji: "🌶️",
+    image: "images/gongura_pickle.jpg",
+    badge: "Spicy & Tangy",
+    prepNotice: "Small Batch Ground • In Stock",
+    description: "Tangy fresh Gongura (sorrel leaves) slow-sautéed in sesame oil with golden fried garlic pods, Guntur red chilies, roasted coriander seeds, and mustard. Gives an instant kick to hot steamed rice & ghee!",
+    ingredients: ["Fresh Gongura Sorrel Leaves", "Pure Gingelly (Sesame) Oil", "Guntur Red Chilies", "Garlic Pods", "Fenugreek & Mustard", "Sea Salt"],
+    storageInstructions: "Store at room temperature. Keep oil layer on top. Shelf life: 9 Months.",
+    whatsappNumber: "919876543210"
+  },
+  {
+    id: "food-bakes-banana",
+    name: "Organic Whole Wheat & Jaggery Walnut Loaf",
+    category: "bakes",
+    categoryName: "Fresh Home Bakes & Cakes",
+    chefName: "Meera Nair",
+    chefCity: "Kochi, Kerala",
+    chefAvatar: "🧁",
+    chefExperience: "Healthy Baking Enthusiast",
+    price: 340,
+    servings: "450g Loaf (8 thick slices)",
+    diet: "eggless",
+    dietLabel: "100% Maida-Free & White Sugar-Free",
+    rating: "4.9 ★ (110+ loaves)",
+    imageEmoji: "🍞",
+    image: "images/banana_loaf.jpg",
+    badge: "Guilt-Free Healthy",
+    prepNotice: "Baked Every Morning • 4 hrs pre-order",
+    description: "Naturally sweet, wholesome tea-time banana bread made with 100% stoneground whole wheat flour, organic Marayoor jaggery, ripe Robusta bananas, cold-pressed coconut oil, and crunchy California walnuts.",
+    ingredients: ["Stoneground Whole Wheat", "Ripe Organic Bananas", "Organic Jaggery Powder", "California Walnuts", "Cinnamon Powder", "Cold-Pressed Coconut Oil"],
+    storageInstructions: "Store in airtight container. Microwave slice for 10 seconds before eating for a bakery-fresh warm feel.",
+    whatsappNumber: "919876543210"
+  },
+  {
+    id: "food-tiffin-north-indian",
+    name: "Punjabi Dal Makhani & Tawa Paneer Lunchbox",
+    category: "tiffins",
+    categoryName: "Daily Homestyle Tiffins",
+    chefName: "Harpreet Kaur",
+    chefCity: "Chandigarh / Delhi NCR",
+    chefAvatar: "👩‍🍳",
+    chefExperience: "18 yrs homestyle cooking",
+    price: 160,
+    servings: "Serves 1-2 • Complete Meal Box",
+    diet: "veg",
+    dietLabel: "Slow-Cooked Homestyle Punjabi",
+    rating: "4.95 ★ (280+ meals)",
+    imageEmoji: "🍲",
+    image: "images/dal_makhani.jpg",
+    badge: "Rich & Wholesome",
+    prepNotice: "Fresh Hot Lunch • Order before 11:00 AM",
+    description: "Slow-cooked overnight black lentils (Dal Makhani) in white butter, Kadai Paneer with bell peppers, 4 soft butter Phulkas, Jeera Rice, Fresh Mint Chutney, and Gulab Jamun dessert.",
+    ingredients: ["Urad Dal & Rajma", "Fresh Dairy Paneer", "Desi White Butter", "Whole Wheat Flour", "Fresh Cream & Tomatoes", "Aromatic Garam Masala"],
+    storageInstructions: "Delivered hot in 4-compartment tamper-proof box. Reheat if needed.",
+    whatsappNumber: "919876543210"
+  }
+];
+
+
+</script>
+  <script>
+// Empowering Women Food Entrepreneurs Digitally - Main Script
+// Tailored for Home Cooks, Cloud Kitchens, Bakers, Tiffins & Pickle Makers
+
+document.addEventListener('DOMContentLoaded', () => {
+  initNavbar();
+  initQuiz();
+  initCart();
+  initFoodMenu();
+  renderSkillCards();
+  renderStoryCards();
+  renderResourceCards();
+  initResourceTabs();
+  initFoodCalculator();
+  initFAQs();
+  initContactForm();
+  initNewsletterForm();
+  initBackToTop();
+});
+
+/* ==========================================================================
+   Navbar & Mobile Menu
+   ========================================================================== */
+function initNavbar() {
+  const header = document.querySelector('.header');
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navMenu = document.getElementById('navMenu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Scroll blur effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    updateActiveNavLink();
+  });
+
+  // Mobile menu toggle
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      const isOpen = navMenu.classList.contains('open');
+      mobileToggle.innerHTML = isOpen ? '✕' : '☰';
+      mobileToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu when link clicked
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        mobileToggle.innerHTML = '☰';
+      });
+    });
+  }
+
+  function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120;
+      const sectionId = current.getAttribute('id');
+      const targetLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
+
+      if (targetLink) {
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          targetLink.classList.add('active');
+        } else {
+          targetLink.classList.remove('active');
+        }
+      }
+    });
+  }
+}
+
+/* ==========================================================================
+   Hero Food Readiness Mini-Quiz
+   ========================================================================== */
+let currentQuizStep = 0;
+let userQuizAnswers = [];
+
+function initQuiz() {
+  renderQuizStep(0);
+}
+
+function renderQuizStep(stepIndex) {
+  const quizCard = document.getElementById('heroQuizCard');
+  if (!quizCard) return;
+
+  const currentQ = QUIZ_QUESTIONS[stepIndex];
+  if (!currentQ) return;
+
+  quizCard.innerHTML = `
+    <span class="quiz-badge">🍲 Step ${stepIndex + 1} of ${QUIZ_QUESTIONS.length}: Kitchen Assessment</span>
+    <h3>${currentQ.question}</h3>
+    <p>Select what best fits your home food venture:</p>
+    <div class="quiz-options">
+      ${currentQ.options.map((opt, i) => `
+        <button class="quiz-opt-btn" onclick="selectQuizAnswer(${stepIndex}, ${i})">
+          <span>👩‍🍳</span>
+          <span>${opt.text}</span>
+        </button>
+      `).join('')}
+    </div>
+  `;
+}
+
+window.selectQuizAnswer = function(stepIndex, optionIndex) {
+  const chosenOption = QUIZ_QUESTIONS[stepIndex].options[optionIndex];
+  userQuizAnswers[stepIndex] = chosenOption;
+
+  if (stepIndex + 1 < QUIZ_QUESTIONS.length) {
+    renderQuizStep(stepIndex + 1);
+  } else {
+    showQuizResult();
+  }
+};
+
+function showQuizResult() {
+  const quizCard = document.getElementById('heroQuizCard');
+  if (!quizCard) return;
+
+  const recommendedSkillId = userQuizAnswers[0]?.skill || "whatsapp-food-business";
+  const matchedSkill = SKILLS_DATA.find(s => s.id === recommendedSkillId) || SKILLS_DATA[0];
+  const advice = userQuizAnswers[0]?.recommendation || "Focus on building your food menu and collecting advance orders!";
+
+  quizCard.innerHTML = `
+    <div class="quiz-badge" style="background:#ede9fe; color:#5b21b6;">🎉 Personalized Kitchen Growth Plan!</div>
+    <h3>Your Next Step to More Orders</h3>
+    <p style="color:#475569; margin-bottom: 1rem;">Based on your food specialization, here is your primary growth priority:</p>
+    <div class="quiz-result-box" style="display:block; margin-bottom:1.25rem;">
+      <h4>🌟 Recommended Focus: ${matchedSkill.title}</h4>
+      <p style="color:#475569;">${advice}</p>
+      <div style="font-size:0.85rem; font-weight:700; color:#db2777;">Category: ${matchedSkill.category} • ${matchedSkill.readTime}</div>
+    </div>
+    <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+      <button class="btn btn-primary btn-sm" onclick="openSkillModal('${matchedSkill.id}')">
+        🚀 View ${matchedSkill.title} Guide
+      </button>
+      <button class="btn btn-secondary btn-sm" onclick="resetQuiz()">
+        🔄 Retake Quiz
+      </button>
+    </div>
+  `;
+}
+
+window.resetQuiz = function() {
+  userQuizAnswers = [];
+  renderQuizStep(0);
+};
+
+/* ==========================================================================
+   Shopping Cart State & Functions
+   ========================================================================== */
+let shoppingCart = [];
+let cartCookingNotes = "";
+
+function initCart() {
+  try {
+    const saved = localStorage.getItem('annapurna_cart');
+    if (saved) shoppingCart = JSON.parse(saved);
+  } catch (e) {
+    shoppingCart = [];
+  }
+  updateCartBadges();
+  renderCartDrawer();
+}
+
+function saveCart() {
+  try {
+    localStorage.setItem('annapurna_cart', JSON.stringify(shoppingCart));
+  } catch (e) {}
+  updateCartBadges();
+  renderCartDrawer();
+}
+
+window.addToCart = function(foodId, qty = 1) {
+  const item = HOMEMADE_FOOD_ITEMS.find(f => f.id === foodId);
+  if (!item) return;
+
+  const existing = shoppingCart.find(i => i.id === foodId);
+  if (existing) {
+    existing.qty += qty;
+  } else {
+    shoppingCart.push({
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      servings: item.servings,
+      imageEmoji: item.imageEmoji,
+      image: item.image || '',
+      chefName: item.chefName,
+      chefCity: item.chefCity,
+      diet: item.diet,
+      qty: qty
+    });
+  }
+  saveCart();
+  renderFoodCards(activeFoodCategory, foodSearchQuery);
+  showToast(`🛒 Added "${item.name}" to your cart!`);
+};
+
+window.updateCartQty = function(foodId, delta) {
+  const item = shoppingCart.find(i => i.id === foodId);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) {
+    shoppingCart = shoppingCart.filter(i => i.id !== foodId);
+  }
+  saveCart();
+  renderFoodCards(activeFoodCategory, foodSearchQuery);
+};
+
+window.removeFromCart = function(foodId) {
+  const item = shoppingCart.find(i => i.id === foodId);
+  const name = item ? item.name : "Item";
+  shoppingCart = shoppingCart.filter(i => i.id !== foodId);
+  saveCart();
+  renderFoodCards(activeFoodCategory, foodSearchQuery);
+  showToast(`🗑️ Removed "${name}" from cart`);
+};
+
+window.clearCart = function() {
+  shoppingCart = [];
+  saveCart();
+  renderFoodCards(activeFoodCategory, foodSearchQuery);
+};
+
+function getCartCount() {
+  return shoppingCart.reduce((total, item) => total + item.qty, 0);
+}
+
+function getCartSubtotal() {
+  return shoppingCart.reduce((total, item) => total + (item.price * item.qty), 0);
+}
+
+function updateCartBadges() {
+  const count = getCartCount();
+  const navBadge = document.getElementById('navCartBadge');
+  const floatBadge = document.getElementById('floatingCartCount');
+  const floatBtn = document.getElementById('floatingCartBtn');
+  const drawerBadge = document.getElementById('cartDrawerCount');
+
+  if (navBadge) navBadge.innerText = count;
+  if (floatBadge) floatBadge.innerText = count;
+  if (drawerBadge) drawerBadge.innerText = `${count} ${count === 1 ? 'item' : 'items'}`;
+
+  if (floatBtn) {
+    if (count > 0) {
+      floatBtn.classList.add('visible');
+    } else {
+      floatBtn.classList.remove('visible');
+    }
+  }
+}
+
+window.toggleCartDrawer = function() {
+  const overlay = document.getElementById('cartDrawerOverlay');
+  if (!overlay) return;
+  overlay.classList.toggle('active');
+  if (overlay.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+    renderCartDrawer();
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+};
+
+window.openCartDrawer = function() {
+  const overlay = document.getElementById('cartDrawerOverlay');
+  if (!overlay) return;
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  renderCartDrawer();
+};
+
+window.closeCartDrawer = function(event) {
+  if (event && event.target && event.target.id !== 'cartDrawerOverlay' && !event.target.classList.contains('cart-drawer-close')) {
+    return;
+  }
+  const overlay = document.getElementById('cartDrawerOverlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+};
+
+function renderCartDrawer() {
+  const body = document.getElementById('cartDrawerBody');
+  const footer = document.getElementById('cartDrawerFooter');
+  if (!body || !footer) return;
+
+  if (shoppingCart.length === 0) {
+    body.innerHTML = `
+      <div class="cart-empty-state">
+        <div class="empty-icon">🍲</div>
+        <h3>Your Cart is Empty</h3>
+        <p>You haven't added any fresh homemade dishes yet. Explore our home chef menu and enjoy authentic home cooking!</p>
+        <button class="btn btn-primary btn-sm" onclick="closeCartDrawer(); scrollToFoodMenu();">
+          Browse Homemade Menu ➔
+        </button>
+      </div>
+    `;
+    footer.innerHTML = '';
+    return;
+  }
+
+  const subtotal = getCartSubtotal();
+  const freeDeliveryThreshold = 400;
+  const isFreeDelivery = subtotal >= freeDeliveryThreshold;
+  const deliveryFee = isFreeDelivery ? 0 : 35;
+  const packagingFee = 0; // 100% Free Packaging promotion
+  const total = subtotal + deliveryFee + packagingFee;
+  const amountNeededForFreeDelivery = Math.max(0, freeDeliveryThreshold - subtotal);
+
+  body.innerHTML = `
+    <!-- Free Delivery Indicator -->
+    <div class="cart-delivery-banner ${isFreeDelivery ? 'unlocked' : ''}">
+      <div class="delivery-banner-icon">${isFreeDelivery ? '🎉' : '🛵'}</div>
+      <div class="delivery-banner-text">
+        ${isFreeDelivery 
+          ? `<strong>FREE Home Delivery Unlocked!</strong> You saved ₹35 on delivery.` 
+          : `Add <strong>₹${amountNeededForFreeDelivery}</strong> more homemade food for <strong>FREE Delivery</strong>!`
+        }
+      </div>
+    </div>
+
+    <!-- Cart Items List -->
+    <div class="cart-items-list">
+      ${shoppingCart.map(item => `
+        <div class="cart-item-row">
+          <div class="cart-item-thumb-box">
+            ${item.image ? `
+              <img src="${item.image}" alt="${item.name}" class="cart-item-thumb" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="cart-item-emoji" style="display:none;">${item.imageEmoji}</div>
+            ` : `
+              <div class="cart-item-emoji">${item.imageEmoji}</div>
+            `}
+          </div>
+          <div class="cart-item-info">
+            <div class="cart-item-title">${item.name}</div>
+            <div class="cart-item-chef"><span class="price-unit">₹${item.price}</span> • ${item.servings}</div>
+          </div>
+          <div class="cart-item-controls">
+            <div class="qty-stepper">
+              <button class="qty-btn" onclick="updateCartQty('${item.id}', -1)">−</button>
+              <span class="qty-val">${item.qty}</span>
+              <button class="qty-btn" onclick="updateCartQty('${item.id}', 1)">+</button>
+            </div>
+            <div class="cart-item-total">₹${item.price * item.qty}</div>
+            <button class="cart-item-remove" onclick="removeFromCart('${item.id}')" title="Remove item">🗑️</button>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <!-- Kitchen Instructions Box -->
+    <div class="cart-notes-card">
+      <label for="cartKitchenNotes">📝 Special Kitchen / Dietary Instructions (Optional):</label>
+      <textarea id="cartKitchenNotes" placeholder="e.g. Less spicy, keep chutney separate, Jain preparation..." oninput="cartCookingNotes = this.value">${cartCookingNotes}</textarea>
+    </div>
+  `;
+
+  footer.innerHTML = `
+    <div class="cart-bill-summary">
+      <div class="bill-row">
+        <span>Item Subtotal (${getCartCount()} items):</span>
+        <span>₹${subtotal}</span>
+      </div>
+      <div class="bill-row">
+        <span>Home Delivery Fee:</span>
+        <span style="${isFreeDelivery ? 'color: #10b981; font-weight:700;' : ''}">${isFreeDelivery ? 'FREE' : `₹${deliveryFee}`}</span>
+      </div>
+      <div class="bill-row">
+        <span>Eco Spill-Proof Packaging:</span>
+        <span style="color: #10b981; font-weight:700;">FREE (₹0)</span>
+      </div>
+      <div class="bill-row total-row">
+        <span>Total Amount to Pay:</span>
+        <span class="total-price">₹${total}</span>
+      </div>
+    </div>
+
+    <div class="cart-footer-actions">
+      <button class="btn btn-primary" onclick="openCheckoutModal()" style="width: 100%;">
+        <span>🛍️ Proceed to In-Website Checkout (₹${total})</span>
+      </button>
+      <button class="btn btn-whatsapp-cart" onclick="orderCartOnWhatsApp()" style="width: 100%;">
+        <span>💬 Or Order Entire Cart on WhatsApp</span>
+      </button>
+    </div>
+  `;
+}
+
+window.scrollToFoodMenu = function() {
+  const foodSec = document.getElementById('food-menu');
+  if (foodSec) foodSec.scrollIntoView({ behavior: 'smooth' });
+};
+
+/* ==========================================================================
+   In-Website Checkout Modal & Order Processing
+   ========================================================================== */
+window.openCheckoutModal = function() {
+  if (shoppingCart.length === 0) {
+    showToast("⚠️ Your cart is empty. Please add some food items first.");
+    return;
+  }
+
+  closeCartDrawer();
+
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalContent = document.getElementById('modalContent');
+  if (!modalOverlay || !modalContent) return;
+
+  const subtotal = getCartSubtotal();
+  const isFreeDelivery = subtotal >= 400;
+  const deliveryFee = isFreeDelivery ? 0 : 35;
+  const total = subtotal + deliveryFee;
+
+  modalContent.innerHTML = `
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.25rem;">
+      <div style="width:54px; height:54px; border-radius:14px; background:linear-gradient(135deg, #ec4899, #8b5cf6); display:flex; align-items:center; justify-content:center; font-size:1.8rem; color:#fff;">
+        🛍️
+      </div>
+      <div>
+        <span class="skill-badge" style="background:#fce7f3; color:#db2777;">Secure Direct Checkout</span>
+        <h2 style="font-size:1.5rem; margin-top:0.2rem; color:#1e1b4b;">Checkout Your Homemade Meal</h2>
+      </div>
+    </div>
+
+    <div class="checkout-grid-layout">
+      <!-- Left: Delivery & Contact Form -->
+      <form id="inWebsiteCheckoutForm" onsubmit="handleInWebsiteCheckout(event)">
+        <h3 style="font-size:1.1rem; color:#4c1d95; margin-bottom:0.75rem;">1. Delivery & Contact Details</h3>
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+          <div class="form-group" style="margin-bottom:0.4rem;">
+            <label style="font-size:0.85rem; font-weight:700; color:#334155;">Full Name *</label>
+            <input type="text" id="orderCustName" class="form-control" placeholder="e.g. Priya Sharma" required />
+          </div>
+          <div class="form-group" style="margin-bottom:0.4rem;">
+            <label style="font-size:0.85rem; font-weight:700; color:#334155;">Phone / WhatsApp *</label>
+            <input type="tel" id="orderCustPhone" class="form-control" placeholder="e.g. 9876543210" required />
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:0.75rem;">
+          <label style="font-size:0.85rem; font-weight:700; color:#334155;">Delivery Address (House/Flat, Building, Area) *</label>
+          <textarea id="orderCustAddress" class="form-control" rows="2" placeholder="e.g. Flat 402, Lotus Orchid, Baner Road, Pune" required></textarea>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:1.25rem;">
+          <div class="form-group" style="margin-bottom:0.4rem;">
+            <label style="font-size:0.85rem; font-weight:700; color:#334155;">Preferred Time Slot *</label>
+            <select id="orderTimeSlot" class="form-control" style="padding:0.7rem; border-radius:10px; border:1px solid #ddd6fe; width:100%; font-family:inherit;" required>
+              <option value="Lunch: 12:30 PM - 2:00 PM">🍱 Lunch (12:30 PM - 2:00 PM)</option>
+              <option value="Evening Snack: 4:30 PM - 6:00 PM">☕ Evening Snack (4:30 PM - 6:00 PM)</option>
+              <option value="Dinner: 7:30 PM - 9:30 PM">🍲 Dinner (7:30 PM - 9:30 PM)</option>
+              <option value="Tomorrow Fresh Slot">📅 Tomorrow Fresh Slot</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom:0.4rem;">
+            <label style="font-size:0.85rem; font-weight:700; color:#334155;">Landmark / Area Pincode</label>
+            <input type="text" id="orderPincode" class="form-control" placeholder="e.g. Near HDFC Bank, 411045" />
+          </div>
+        </div>
+
+        <h3 style="font-size:1.1rem; color:#4c1d95; margin-bottom:0.75rem;">2. Select Payment Method</h3>
+        
+        <div class="payment-method-options" style="display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.5rem;">
+          <label class="payment-method-card active" onclick="selectPaymentMethod('upi')">
+            <input type="radio" name="payMethod" value="upi" checked />
+            <div class="pay-method-info">
+              <strong>📱 Instant UPI / QR Scan (Recommended - 100% Secure)</strong>
+              <span>Pay directly via GPay, PhonePe, Paytm or any UPI app with 0% platform surcharge.</span>
+            </div>
+          </label>
+
+          <label class="payment-method-card" onclick="selectPaymentMethod('cod')">
+            <input type="radio" name="payMethod" value="cod" />
+            <div class="pay-method-info">
+              <strong>💵 Cash on Delivery / Pay on Pickup</strong>
+              <span>Pay cash or UPI directly to the home delivery runner when your food arrives.</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Dynamic UPI Payment Card Details -->
+        <div id="upiPaymentDetailsBox" class="upi-payment-box">
+          <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+            <div class="upi-mock-qr">
+              <div style="font-size:3rem;">📱</div>
+              <span style="font-size:0.7rem; color:#475569; font-weight:700;">SCAN TO PAY</span>
+            </div>
+            <div style="flex:1; min-width:180px;">
+              <div style="font-size:0.8rem; color:#64748b;">Official Kitchen Merchant UPI ID:</div>
+              <div style="display:flex; align-items:center; gap:0.5rem; margin:0.3rem 0;">
+                <code style="background:#f5f3ff; color:#6d28d9; padding:0.3rem 0.6rem; border-radius:6px; font-weight:700; font-size:0.95rem;">annapurna.homechefs@okaxis</code>
+                <button type="button" class="btn btn-secondary btn-sm" style="padding:0.25rem 0.5rem; font-size:0.75rem;" onclick="copyUPI()">📋 Copy</button>
+              </div>
+              <div style="font-size:0.78rem; color:#059669; font-weight:600;">✓ Verified 0% Commission Women Entrepreneur Pool</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1.5rem; border-top:1px solid #f1e8f7; padding-top:1rem; gap:1rem; flex-wrap:wrap;">
+          <div>
+            <div style="font-size:0.8rem; color:#64748b;">FINAL PAYABLE AMOUNT</div>
+            <div style="font-size:1.5rem; font-weight:800; color:#ec4899;">₹${total}</div>
+          </div>
+          
+          <div style="display:flex; gap:0.75rem;">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="closeModal(); openCartDrawer();">Back to Cart</button>
+            <button type="submit" class="btn btn-primary">
+              <span>🎉 Confirm & Place Order</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  `;
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+
+window.selectPaymentMethod = function(method) {
+  const cards = document.querySelectorAll('.payment-method-card');
+  const upiBox = document.getElementById('upiPaymentDetailsBox');
+  
+  cards.forEach(card => {
+    const radio = card.querySelector('input[type="radio"]');
+    if (radio && radio.value === method) {
+      card.classList.add('active');
+      radio.checked = true;
+    } else {
+      card.classList.remove('active');
+    }
+  });
+
+  if (upiBox) {
+    upiBox.style.display = method === 'upi' ? 'block' : 'none';
+  }
+};
+
+window.copyUPI = function() {
+  navigator.clipboard.writeText('annapurna.homechefs@okaxis');
+  showToast('📋 UPI ID copied to clipboard: annapurna.homechefs@okaxis');
+};
+
+window.handleInWebsiteCheckout = function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('orderCustName')?.value.trim();
+  const phone = document.getElementById('orderCustPhone')?.value.trim();
+  const address = document.getElementById('orderCustAddress')?.value.trim();
+  const timeSlot = document.getElementById('orderTimeSlot')?.value;
+  const payMethod = document.querySelector('input[name="payMethod"]:checked')?.value || 'upi';
+
+  if (!name || !phone || !address) {
+    showToast('⚠️ Please fill in all required delivery fields.');
+    return;
+  }
+
+  const orderId = 'ANN-' + Math.floor(100000 + Math.random() * 900000);
+  const subtotal = getCartSubtotal();
+  const isFreeDelivery = subtotal >= 400;
+  const deliveryFee = isFreeDelivery ? 0 : 35;
+  const total = subtotal + deliveryFee;
+
+  const orderData = {
+    orderId: orderId,
+    name: name,
+    phone: phone,
+    address: address,
+    timeSlot: timeSlot,
+    payMethod: payMethod === 'upi' ? 'Online UPI (Verified)' : 'Cash on Delivery (COD)',
+    items: [...shoppingCart],
+    subtotal: subtotal,
+    deliveryFee: deliveryFee,
+    total: total,
+    notes: cartCookingNotes,
+    timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+  };
+
+  // Clear shopping cart
+  shoppingCart = [];
+  cartCookingNotes = "";
+  saveCart();
+  renderFoodCards(activeFoodCategory, foodSearchQuery);
+
+  // Show celebratory confirmation receipt
+  showOrderConfirmationModal(orderData);
+};
+
+function showOrderConfirmationModal(order) {
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalContent = document.getElementById('modalContent');
+  if (!modalOverlay || !modalContent) return;
+
+  const uniqueChefs = [...new Set(order.items.map(i => i.chefName))].join(', ');
+
+  modalContent.innerHTML = `
+    <div style="text-align:center; padding:1rem 0 1.5rem;">
+      <div style="width:74px; height:74px; background:#ecfdf5; border:3px solid #10b981; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.6rem; margin:0 auto 1rem;">
+        ✅
+      </div>
+      <span class="skill-badge" style="background:#dcfce7; color:#15803d; font-size:0.85rem;">Order Successfully Confirmed!</span>
+      <h2 style="font-size:1.75rem; color:#1e1b4b; margin-top:0.4rem;">Thank You, ${order.name}!</h2>
+      <p style="color:#64748b; font-size:0.95rem;">Your homemade food order has been sent directly to our home chefs.</p>
+    </div>
+
+    <!-- Order Receipt Card -->
+    <div class="order-receipt-card">
+      <div class="receipt-header-row">
+        <div>
+          <span style="font-size:0.75rem; color:#64748b; font-weight:700;">ORDER ID</span>
+          <div style="font-size:1.15rem; font-weight:800; color:#7c3aed;">#${order.orderId}</div>
+        </div>
+        <div style="text-align:right;">
+          <span style="font-size:0.75rem; color:#64748b; font-weight:700;">ORDER TIME</span>
+          <div style="font-size:0.95rem; font-weight:700; color:#1e1b4b;">Today, ${order.timestamp}</div>
+        </div>
+      </div>
+
+      <div class="receipt-chef-note">
+        <span>👩‍🍳</span>
+        <div><strong>Kitchen Dispatched:</strong> Handed over to Chef <strong>${uniqueChefs}</strong> for fresh preparation.</div>
+      </div>
+
+      <div class="receipt-items-table">
+        <h4 style="font-size:0.9rem; color:#4c1d95; margin-bottom:0.5rem; text-transform:uppercase;">Dishes Ordered:</h4>
+        ${order.items.map(item => `
+          <div class="receipt-item-line">
+            <div>
+              <strong>${item.name}</strong> × ${item.qty}
+              <div style="font-size:0.78rem; color:#64748b;">${item.servings} • By ${item.chefName}</div>
+            </div>
+            <div style="font-weight:700;">₹${item.price * item.qty}</div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="receipt-delivery-info">
+        <div><strong>📍 Delivery Address:</strong> ${order.address}</div>
+        <div><strong>⏱️ Delivery Slot:</strong> ${order.timeSlot}</div>
+        <div><strong>💳 Payment:</strong> ${order.payMethod} (Total: ₹${order.total})</div>
+        ${order.notes ? `<div><strong>📝 Instructions:</strong> ${order.notes}</div>` : ''}
+      </div>
+    </div>
+
+    <div style="display:flex; justify-content:center; gap:0.75rem; margin-top:1.5rem; flex-wrap:wrap;">
+      <button class="btn btn-secondary btn-sm" onclick="window.print()">
+        🖨️ Print Receipt
+      </button>
+      <button class="btn btn-primary" onclick="closeModal()">
+        Done & Explore More Food 🍲
+      </button>
+    </div>
+  `;
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+window.orderCartOnWhatsApp = function() {
+  if (shoppingCart.length === 0) return;
+
+  const subtotal = getCartSubtotal();
+  const isFreeDelivery = subtotal >= 400;
+  const deliveryFee = isFreeDelivery ? 0 : 35;
+  const total = subtotal + deliveryFee;
+
+  let itemListText = shoppingCart.map((item, idx) => 
+    `${idx + 1}. *${item.name}* (x${item.qty}) - ₹${item.price * item.qty} [By ${item.chefName}]`
+  ).join('\n');
+
+  const notesText = cartCookingNotes ? `\n\n*Special Notes:* ${cartCookingNotes}` : '';
+
+  const message = encodeURIComponent(
+    `Hello Annapurna Home Chefs Network! 🍲\n\n` +
+    `I would like to place an order for the following homemade dishes:\n\n` +
+    `${itemListText}\n\n` +
+    `• *Item Subtotal:* ₹${subtotal}\n` +
+    `• *Delivery Fee:* ${isFreeDelivery ? 'FREE (₹0)' : `₹${deliveryFee}`}\n` +
+    `• *Total Amount:* ₹${total}${notesText}\n\n` +
+    `Please confirm the kitchen delivery schedule and UPI payment details. Thank you!`
+  );
+
+  const phone = "919876543210";
+  window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+};
+
+/* ==========================================================================
+   Homemade Food Marketplace & Menu Logic
+   ========================================================================== */
+let activeFoodCategory = 'all';
+let foodSearchQuery = '';
+
+function initFoodMenu() {
+  const catButtons = document.querySelectorAll('.food-cat-btn');
+  const searchInput = document.getElementById('foodSearchInput');
+
+  // Category filter click
+  catButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFoodCategory = btn.getAttribute('data-cat') || 'all';
+      renderFoodCards(activeFoodCategory, foodSearchQuery);
+    });
+  });
+
+  // Search input filter
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      foodSearchQuery = e.target.value.trim().toLowerCase();
+      renderFoodCards(activeFoodCategory, foodSearchQuery);
+    });
+  }
+
+  renderFoodCards('all', '');
+}
+
+function renderFoodCards(category = 'all', query = '') {
+  const container = document.getElementById('foodCardsGrid');
+  if (!container) return;
+
+  if (typeof HOMEMADE_FOOD_ITEMS === 'undefined' || !HOMEMADE_FOOD_ITEMS.length) {
+    container.innerHTML = `<p style="text-align:center; color:#64748b;">No food items available.</p>`;
+    return;
+  }
+
+  let filtered = HOMEMADE_FOOD_ITEMS.filter(item => {
+    const matchesCategory = (category === 'all') || (item.category === category);
+    const matchesQuery = !query || 
+      item.name.toLowerCase().includes(query) ||
+      item.description.toLowerCase().includes(query) ||
+      item.chefName.toLowerCase().includes(query) ||
+      item.chefCity.toLowerCase().includes(query) ||
+      item.categoryName.toLowerCase().includes(query);
+    return matchesCategory && matchesQuery;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; background: #fff; border-radius: 16px; border: 1px dashed #ddd6fe;">
+        <div style="font-size: 3rem; margin-bottom: 0.5rem;">🍲</div>
+        <h3 style="color: #4c1d95; font-size: 1.3rem;">No dishes found matching "${query}"</h3>
+        <p style="color: #64748b; margin-bottom: 1.25rem;">Try searching for "Thali", "Pickle", "Cake", "Laddoo", or "Biryani".</p>
+        <button class="btn btn-primary btn-sm" onclick="resetFoodFilters()">View All Homemade Dishes</button>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(item => {
+    const inCart = shoppingCart.find(i => i.id === item.id);
+    const cartQty = inCart ? inCart.qty : 0;
+
+    return `
+      <div class="food-card" onclick="openFoodDetailsModal('${item.id}')">
+        <!-- Photo Container with Badges -->
+        <div class="food-img-container">
+          <img src="${item.image || ''}" alt="${item.name}" loading="lazy" class="food-card-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="food-emoji-fallback" style="display:${item.image ? 'none' : 'flex'};">${item.imageEmoji}</div>
+          
+          <div class="food-badge-overlay">
+            <span class="food-diet-tag diet-${item.diet}">
+              ${item.diet === 'eggless' ? '🥚❌ Eggless' : (item.diet === 'jain' ? '🌿 Jain' : '🌱 Pure Veg')}
+            </span>
+            <span class="food-tag-pill">${item.badge}</span>
+          </div>
+        </div>
+
+        <div class="food-card-body">
+          <h3 class="food-title">${item.name}</h3>
+          <p class="food-desc">${item.description}</p>
+
+          <div class="food-portion-row">
+            <span class="portion-badge">📦 ${item.servings}</span>
+            <span class="rating-badge">${item.rating}</span>
+          </div>
+
+          <div class="food-prep-row">
+            <span>⏱️ ${item.prepNotice}</span>
+          </div>
+        </div>
+
+        <div class="food-card-footer">
+          <div class="food-price-box">
+            <span class="currency">₹</span>
+            <span class="price-val">${item.price}</span>
+            <span class="price-sub">/ portion</span>
+          </div>
+
+          <div class="food-card-actions">
+            ${cartQty > 0 ? `
+              <div class="card-qty-stepper" onclick="event.stopPropagation()">
+                <button class="card-qty-btn" onclick="updateCartQty('${item.id}', -1)">−</button>
+                <span class="card-qty-val">${cartQty} in Cart</span>
+                <button class="card-qty-btn" onclick="updateCartQty('${item.id}', 1)">+</button>
+              </div>
+            ` : `
+              <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart('${item.id}')" title="Add item to website cart">
+                <span>🛒 Add</span>
+              </button>
+            `}
+            <button class="btn-whatsapp-order" onclick="event.stopPropagation(); orderFoodDirect('${item.id}')" title="Order directly on WhatsApp">
+              <span>💬</span>
+            </button>
+            <button class="btn-food-view" onclick="event.stopPropagation(); openFoodDetailsModal('${item.id}')" title="View ingredients & chef story">
+              <span>🔍</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+window.resetFoodFilters = function() {
+  activeFoodCategory = 'all';
+  foodSearchQuery = '';
+  const searchInput = document.getElementById('foodSearchInput');
+  if (searchInput) searchInput.value = '';
+  const catButtons = document.querySelectorAll('.food-cat-btn');
+  catButtons.forEach((btn, idx) => {
+    if (idx === 0) btn.classList.add('active');
+    else btn.classList.remove('active');
+  });
+  renderFoodCards('all', '');
+};
+
+/* ==========================================================================
+   Food Item Detail Modal
+   ========================================================================== */
+window.openFoodDetailsModal = function(foodId) {
+  const item = HOMEMADE_FOOD_ITEMS.find(f => f.id === foodId);
+  if (!item) return;
+
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalContent = document.getElementById('modalContent');
+  if (!modalOverlay || !modalContent) return;
+
+  const inCart = shoppingCart.find(i => i.id === item.id);
+  const cartQty = inCart ? inCart.qty : 0;
+
+  modalContent.innerHTML = `
+    <!-- Modal Hero Photo Banner -->
+    <div class="modal-food-hero-container">
+      ${item.image ? `
+        <img src="${item.image}" alt="${item.name}" class="modal-food-hero-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="modal-food-hero-fallback" style="display:none;">${item.imageEmoji}</div>
+      ` : `
+        <div class="modal-food-hero-fallback">${item.imageEmoji}</div>
+      `}
+      <div class="modal-hero-badge-wrap">
+        <span class="food-diet-tag diet-${item.diet}">${item.dietLabel}</span>
+        <span class="food-tag-pill">${item.badge}</span>
+      </div>
+    </div>
+
+    <div style="margin-bottom:1rem; margin-top:0.5rem;">
+      <h2 style="font-size:1.65rem; color:#1e1b4b; line-height:1.25; margin-bottom:0.25rem;">${item.name}</h2>
+      <div style="font-size:0.9rem; color:#7c3aed; font-weight:700;">${item.categoryName}</div>
+    </div>
+
+    <!-- Kitchen Hygiene Assurance Banner -->
+    <div style="background:#faf7fc; border:1px solid #ede9fe; border-radius:14px; padding:0.85rem 1.15rem; display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; flex-wrap:wrap; gap:0.5rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <span style="font-size:1.6rem;">🍲</span>
+        <div>
+          <div style="font-weight:700; color:#1e1b4b; font-size:0.92rem;">Authentic Homestyle Preparation</div>
+          <div style="font-size:0.8rem; color:#64748b;">Cooked fresh on order with pure ingredients and hygienic packaging</div>
+        </div>
+      </div>
+      <div style="background:#fce7f3; color:#db2777; font-size:0.78rem; font-weight:700; padding:0.3rem 0.75rem; border-radius:99px;">
+        🛡️ FSSAI Verified Home Kitchen
+      </div>
+    </div>
+
+    <p style="font-size:1rem; color:#334155; line-height:1.65; margin-bottom:1.25rem;">
+      ${item.description}
+    </p>
+
+    <!-- Key Details Grid -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:0.75rem; margin-bottom:1.25rem;">
+      <div style="background:#fff; border:1px solid #f1e8f7; border-radius:10px; padding:0.75rem; text-align:center;">
+        <div style="font-size:0.75rem; color:#64748b; font-weight:600;">PORTION SIZE</div>
+        <div style="font-size:0.95rem; font-weight:800; color:#1e1b4b; margin-top:0.2rem;">${item.servings}</div>
+      </div>
+      <div style="background:#fff; border:1px solid #f1e8f7; border-radius:10px; padding:0.75rem; text-align:center;">
+        <div style="font-size:0.75rem; color:#64748b; font-weight:600;">PREPARATION NOTICE</div>
+        <div style="font-size:0.95rem; font-weight:800; color:#db2777; margin-top:0.2rem;">${item.prepNotice}</div>
+      </div>
+      <div style="background:#fff; border:1px solid #f1e8f7; border-radius:10px; padding:0.75rem; text-align:center;">
+        <div style="font-size:0.75rem; color:#64748b; font-weight:600;">CUSTOMER RATING</div>
+        <div style="font-size:0.95rem; font-weight:800; color:#10b981; margin-top:0.2rem;">${item.rating}</div>
+      </div>
+    </div>
+
+    <!-- Fresh Kitchen Ingredients -->
+    <h3 style="font-size:1.1rem; color:#4c1d95; margin-bottom:0.6rem;">🌿 Fresh Ingredients Used</h3>
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.25rem;">
+      ${item.ingredients.map(ing => `
+        <span style="background:#f5f3ff; color:#6d28d9; font-size:0.84rem; font-weight:600; padding:0.35rem 0.75rem; border-radius:8px; border:1px solid #ddd6fe;">
+          ✓ ${ing}
+        </span>
+      `).join('')}
+    </div>
+
+    <!-- Storage & Hygiene Instructions -->
+    <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:0.85rem 1rem; margin-bottom:1.5rem; font-size:0.88rem; color:#92400e; display:flex; align-items:flex-start; gap:0.5rem;">
+      <span>💡</span>
+      <div><strong>Storage & Handling:</strong> ${item.storageInstructions}</div>
+    </div>
+
+    <!-- Pricing and Ordering Actions Footer -->
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; border-top:1px solid #f1e8f7; padding-top:1.25rem; flex-wrap:wrap;">
+      <div>
+        <div style="font-size:0.8rem; color:#64748b; font-weight:600;">DIRECT CHEF PRICE</div>
+        <div style="font-size:1.6rem; font-weight:800; color:#ec4899;">₹${item.price} <span style="font-size:0.85rem; color:#64748b; font-weight:500;">(0% aggregator fee)</span></div>
+      </div>
+
+      <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+        <button class="btn btn-secondary btn-sm" onclick="closeModal()">
+          Close
+        </button>
+        <button class="btn btn-primary" onclick="addToCart('${item.id}'); closeModal(); openCartDrawer();">
+          <span>🛒 Add to Cart & Checkout</span>
+        </button>
+        <button class="btn-whatsapp-order" onclick="orderFoodDirect('${item.id}')" style="padding:0.6rem 1rem;">
+          <span>💬 WhatsApp Order</span>
+        </button>
+      </div>
+    </div>
+  `;
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+
+/* ==========================================================================
+   Direct WhatsApp Order Dispatch
+   ========================================================================== */
+window.orderFoodDirect = function(foodId) {
+  const item = HOMEMADE_FOOD_ITEMS.find(f => f.id === foodId);
+  if (!item) return;
+
+  const phone = item.whatsappNumber || "919876543210";
+  const textMessage = encodeURIComponent(
+    `Hello Chef ${item.chefName}! 🍲\n\n` +
+    `I saw your homemade "${item.name}" on the Annapurna Digital Women Entrepreneurs platform.\n\n` +
+    `• Item: ${item.name} (${item.servings})\n` +
+    `• Price: ₹${item.price}\n` +
+    `• Diet: ${item.dietLabel}\n\n` +
+    `I would like to place an order. Could you please share the delivery availability, timing slot, and UPI payment details for advance booking?\n\n` +
+    `Thank you!`
+  );
+
+  const whatsappUrl = `https://wa.me/${phone}?text=${textMessage}`;
+  
+  showToast(`🍲 Connecting you directly with Chef ${item.chefName} via WhatsApp!`);
+  window.open(whatsappUrl, '_blank');
+};
+
+/* ==========================================================================
+   "List Your Homemade Food" Modal & Handler
+   ========================================================================== */
+window.openAddFoodModal = function() {
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalContent = document.getElementById('modalContent');
+  if (!modalOverlay || !modalContent) return;
+
+  modalContent.innerHTML = `
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+      <div style="width:54px; height:54px; border-radius:14px; background:linear-gradient(135deg, #ec4899, #8b5cf6); display:flex; align-items:center; justify-content:center; font-size:1.8rem; color:#fff;">
+        👩‍🍳
+      </div>
+      <div>
+        <span class="skill-badge" style="background:#fce7f3; color:#db2777;">Home Chef Registration</span>
+        <h2 style="font-size:1.5rem; margin-top:0.2rem; color:#1e1b4b;">List Your Homemade Dish</h2>
+      </div>
+    </div>
+
+    <p style="font-size:0.92rem; color:#64748b; margin-bottom:1.25rem;">
+      Empower your kitchen! Fill in the details of your homemade food dish to list it on our digital menu and accept direct in-website orders and WhatsApp pre-orders with zero commission fees.
+    </p>
+
+    <form id="addFoodForm" onsubmit="handleAddNewFood(event)">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="form-group" style="margin-bottom:0.5rem;">
+          <label style="font-size:0.85rem; font-weight:700; color:#334155;">Your Name / Kitchen Name *</label>
+          <input type="text" id="newChefName" class="form-control" placeholder="e.g. Kavita Ben / Sunita's Kitchen" required />
+        </div>
+        <div class="form-group" style="margin-bottom:0.5rem;">
+          <label style="font-size:0.85rem; font-weight:700; color:#334155;">City & Area *</label>
+          <input type="text" id="newChefCity" class="form-control" placeholder="e.g. Pune, Kothrud" required />
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="form-group" style="margin-bottom:0.5rem;">
+          <label style="font-size:0.85rem; font-weight:700; color:#334155;">Homemade Dish Name *</label>
+          <input type="text" id="newFoodName" class="form-control" placeholder="e.g. Grandma's Mango Chutney" required />
+        </div>
+        <div class="form-group" style="margin-bottom:0.5rem;">
+          <label style="font-size:0.85rem; font-weight:700; color:#334155;">Food Category *</label>
+          <select id="newFoodCategory" class="form-control" required style="padding:0.7rem; border-radius:10px; border:1px solid #ddd6fe; width:100%; font-family:inherit;">
+            <option value="tiffins">🍱 Daily Homestyle Tiffin / Meal</option>
+            <option value="pickles">👵 Heirloom Pickle / Masala</option>
+            <option value="bakes">🎂 Homemade Cake / Bakery</option>
+            <option value="sweets">🪔 Festive Sweets & Snacks</option>
+            <option value="special">🥘 Weekend Party Feast / Biryani</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+        <div class="form-group" style="margin-bottom:0.5rem;">
+          <label style="font-size:0.85rem; font-weight:700; color:#334155;">Price (₹) *</label>
+          <input type="number" id="newFoodPrice" class="form-control" placeholder="e.g. 150" min="10" required />
+        </div>
+        <div class="form-group" style="margin-bottom:0.5rem;">
+          <label style="font-size:0.85rem; font-weight:700; color:#334155;">Portion / Weight *</label>
+          <input type="text" id="newFoodServings" class="form-control" placeholder="e.g. 500g / Serves 2" required />
+        </div>
+        <div class="form-group" style="margin-bottom:0.5rem;">
+          <label style="font-size:0.85rem; font-weight:700; color:#334155;">Diet Type</label>
+          <select id="newFoodDiet" class="form-control" style="padding:0.7rem; border-radius:10px; border:1px solid #ddd6fe; width:100%; font-family:inherit;">
+            <option value="veg">🌱 Pure Veg</option>
+            <option value="eggless">🥚❌ Eggless</option>
+            <option value="jain">🌿 Jain Special</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom:0.75rem;">
+        <label style="font-size:0.85rem; font-weight:700; color:#334155;">Description & Homemade Specialty *</label>
+        <textarea id="newFoodDesc" class="form-control" placeholder="Describe the special homemade touch, purity of ingredients, and how you prepare it..." rows="3" required></textarea>
+      </div>
+
+      <div class="form-group" style="margin-bottom:1.25rem;">
+        <label style="font-size:0.85rem; font-weight:700; color:#334155;">WhatsApp Number for Orders *</label>
+        <input type="tel" id="newChefPhone" class="form-control" placeholder="e.g. 9876543210" required />
+      </div>
+
+      <div style="display:flex; justify-content:flex-end; gap:0.75rem;">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="closeModal()">Cancel</button>
+        <button type="submit" class="btn btn-primary">
+          <span>✨ Publish Homemade Dish</span>
+        </button>
+      </div>
+    </form>
+  `;
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+
+window.handleAddNewFood = function(e) {
+  e.preventDefault();
+
+  const chefName = document.getElementById('newChefName')?.value.trim();
+  const chefCity = document.getElementById('newChefCity')?.value.trim();
+  const foodName = document.getElementById('newFoodName')?.value.trim();
+  const category = document.getElementById('newFoodCategory')?.value;
+  const price = parseFloat(document.getElementById('newFoodPrice')?.value) || 120;
+  const servings = document.getElementById('newFoodServings')?.value.trim();
+  const diet = document.getElementById('newFoodDiet')?.value;
+  const description = document.getElementById('newFoodDesc')?.value.trim();
+  const phone = document.getElementById('newChefPhone')?.value.trim();
+
+  const categoryNames = {
+    tiffins: "Daily Homestyle Tiffins",
+    pickles: "Grandmother's Pickles & Masalas",
+    bakes: "Fresh Home Bakes & Cakes",
+    sweets: "Festive Sweets & Snacks",
+    special: "Weekend Party Feasts"
+  };
+
+  const categoryEmojis = {
+    tiffins: "🍱",
+    pickles: "🏺",
+    bakes: "🎂",
+    sweets: "🪔",
+    special: "🥘"
+  };
+
+  const categoryImages = {
+    tiffins: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80",
+    pickles: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80",
+    bakes: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80",
+    sweets: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80",
+    special: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80"
+  };
+
+  const newDish = {
+    id: `food-custom-${Date.now()}`,
+    name: foodName,
+    category: category,
+    categoryName: categoryNames[category] || "Homemade Food",
+    chefName: chefName,
+    chefCity: chefCity,
+    chefAvatar: "👩‍🍳",
+    chefExperience: "Passionate Home Cook",
+    price: price,
+    servings: servings,
+    diet: diet,
+    dietLabel: diet === 'eggless' ? '100% Eggless' : '100% Pure Veg',
+    rating: "5.0 ★ (New Chef)",
+    imageEmoji: categoryEmojis[category] || "🍲",
+    image: categoryImages[category] || categoryImages.tiffins,
+    badge: "Newly Listed Home Chef",
+    prepNotice: "Fresh on Order",
+    description: description,
+    ingredients: ["Fresh Kitchen Ingredients", "Pure Desi Spices", "Cooked with Motherly Care"],
+    storageInstructions: "Consume fresh or refrigerate as advised by the chef.",
+    whatsappNumber: phone.replace(/[^0-9]/g, '') || "919876543210"
+  };
+
+  HOMEMADE_FOOD_ITEMS.unshift(newDish);
+  closeModal();
+  renderFoodCards(activeFoodCategory, foodSearchQuery);
+  
+  showToast(`🎉 Congratulations Chef ${chefName}! "${foodName}" is now live on the homemade food menu!`);
+
+  const foodSec = document.getElementById('food-menu');
+  if (foodSec) {
+    foodSec.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+/* ==========================================================================
+   Render Digital Skills Cards
+   ========================================================================== */
+function renderSkillCards() {
+  const container = document.getElementById('skillsGrid');
+  if (!container) return;
+
+  container.innerHTML = SKILLS_DATA.map(skill => `
+    <div class="skill-card" onclick="openSkillModal('${skill.id}')" role="button" tabindex="0" aria-label="Learn ${skill.title}">
+      <div class="skill-card-top">
+        <div class="skill-icon-wrap" style="background: ${skill.gradient}; color: #fff;">
+          ${skill.icon}
+        </div>
+        <span class="skill-badge">${skill.difficulty}</span>
+      </div>
+      <h3>${skill.title}</h3>
+      <p>${skill.shortDesc}</p>
+      <div class="skill-card-footer">
+        <div class="skill-meta">
+          <span>⏱️ ${skill.readTime}</span>
+        </div>
+        <button class="skill-btn" onclick="event.stopPropagation(); openSkillModal('${skill.id}')">
+          Read Guide ➔
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ==========================================================================
+   Skill Detail Modal
+   ========================================================================== */
+window.openSkillModal = function(skillId) {
+  const skill = SKILLS_DATA.find(s => s.id === skillId);
+  if (!skill) return;
+
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalContent = document.getElementById('modalContent');
+  if (!modalOverlay || !modalContent) return;
+
+  modalContent.innerHTML = `
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.25rem;">
+      <div style="width:54px; height:54px; border-radius:14px; background:${skill.gradient}; display:flex; align-items:center; justify-content:center; font-size:1.8rem; color:#fff;">
+        ${skill.icon}
+      </div>
+      <div>
+        <span class="skill-badge" style="background:#fce7f3; color:#db2777;">${skill.category}</span>
+        <h2 style="font-size:1.65rem; margin-top:0.25rem;">${skill.title}</h2>
+      </div>
+    </div>
+
+    <p style="font-size:1.02rem; color:#475569; margin-bottom:1.5rem; line-height:1.65;">
+      ${skill.fullDetails.overview}
+    </p>
+
+    <h3 style="font-size:1.2rem; color:#4c1d95; margin-bottom:1rem; border-bottom:2px solid #fce7f3; padding-bottom:0.4rem;">
+      🍲 Step-by-Step Practical Kitchen Guide
+    </h3>
+
+    <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:1.75rem;">
+      ${skill.fullDetails.keyTopics.map(topic => `
+        <div style="background:#faf7fc; padding:1rem 1.25rem; border-radius:12px; border-left:3px solid #8b5cf6;">
+          <h4 style="font-size:1rem; color:#1e1b4b; margin-bottom:0.3rem;">${topic.heading}</h4>
+          <p style="font-size:0.9rem; color:#64748b; margin:0;">${topic.content}</p>
+        </div>
+      `).join('')}
+    </div>
+
+    <h3 style="font-size:1.2rem; color:#4c1d95; margin-bottom:0.75rem;">🛠️ Free Tools & Apps to Use</h3>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:0.75rem; margin-bottom:1.75rem;">
+      ${skill.fullDetails.freeTools.map(tool => `
+        <div style="background:#fff; border:1px solid #ddd6fe; border-radius:10px; padding:0.85rem;">
+          <div style="font-weight:700; color:#7c3aed; font-size:0.92rem;">${tool.name}</div>
+          <div style="font-size:0.8rem; color:#64748b;">${tool.purpose}</div>
+        </div>
+      `).join('')}
+    </div>
+
+    <h3 style="font-size:1.2rem; color:#4c1d95; margin-bottom:0.75rem;">✅ 24-Hour Kitchen Action Checklist</h3>
+    <div style="background:#fdf2f8; border:1px solid #fbcfe8; border-radius:12px; padding:1.25rem; margin-bottom:1.5rem;">
+      ${skill.fullDetails.actionChecklist.map((item, idx) => `
+        <label style="display:flex; align-items:flex-start; gap:0.65rem; margin-bottom:0.6rem; font-size:0.9rem; color:#334155; cursor:pointer;">
+          <input type="checkbox" style="margin-top:0.25rem; accent-color:#ec4899;">
+          <span>${item}</span>
+        </label>
+      `).join('')}
+    </div>
+
+    <div style="display:flex; justify-content:flex-end;">
+      <button class="btn btn-primary btn-sm" onclick="closeModal()">
+        Got It, Let's Cook & Sell! 🍲
+      </button>
+    </div>
+  `;
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+
+/* ==========================================================================
+   Render Success Stories
+   ========================================================================== */
+function renderStoryCards() {
+  const container = document.getElementById('storiesGrid');
+  if (!container) return;
+
+  container.innerHTML = SUCCESS_STORIES.map(story => `
+    <div class="story-card">
+      <div class="story-header">
+        <div class="story-avatar">${story.avatar}</div>
+        <div class="story-meta">
+          <h3>${story.founder}</h3>
+          <p>${story.business} • ${story.location}</p>
+        </div>
+      </div>
+      <span class="story-badge">${story.badge}</span>
+      <p class="story-quote">${story.quote}</p>
+      
+      <div class="story-metric-badge">
+        <div>
+          <div class="metric-num">${story.stats.revenueGrowth}</div>
+          <div class="metric-lbl">${story.stats.monthlyOrders}</div>
+        </div>
+        <div style="font-size:0.8rem; font-weight:700; color:#8b5cf6;">${story.stats.timeframe}</div>
+      </div>
+
+      <button class="btn-story" onclick="openStoryModal('${story.id}')">
+        Read Full Kitchen Journey 📖
+      </button>
+    </div>
+  `).join('');
+}
+
+window.openStoryModal = function(storyId) {
+  const story = SUCCESS_STORIES.find(s => s.id === storyId);
+  if (!story) return;
+
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalContent = document.getElementById('modalContent');
+  if (!modalOverlay || !modalContent) return;
+
+  modalContent.innerHTML = `
+    <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom:1.5rem;">
+      <div style="width:68px; height:68px; border-radius:50%; background:#fdf2f8; border:2px solid #fbcfe8; display:flex; align-items:center; justify-content:center; font-size:2.4rem;">
+        ${story.avatar}
+      </div>
+      <div>
+        <span class="story-badge">${story.badge}</span>
+        <h2 style="font-size:1.75rem; margin-top:0.2rem;">${story.founder}</h2>
+        <p style="font-size:0.95rem; color:#64748b; font-weight:600;">${story.business} • ${story.location}</p>
+      </div>
+    </div>
+
+    <div style="background:#fdf2f8; border-left:4px solid #ec4899; padding:1rem 1.25rem; border-radius:8px; margin-bottom:1.5rem; font-style:italic; font-size:1rem; color:#4c1d95;">
+      ${story.quote}
+    </div>
+
+    <h3 style="font-size:1.2rem; color:#4c1d95; margin-bottom:0.75rem;">🌟 How She Turned Family Recipes Into a Food Brand</h3>
+    <p style="font-size:0.95rem; color:#475569; line-height:1.7; margin-bottom:1.5rem;">
+      ${story.story}
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:1rem; margin-bottom:1.75rem;">
+      <div style="background:#faf7fc; padding:1rem; border-radius:12px; border:1px solid #ede9fe; text-align:center;">
+        <div style="font-size:1.3rem; font-weight:800; color:#ec4899;">${story.stats.revenueGrowth}</div>
+        <div style="font-size:0.78rem; color:#64748b; font-weight:600;">Food Production Volume</div>
+      </div>
+      <div style="background:#faf7fc; padding:1rem; border-radius:12px; border:1px solid #ede9fe; text-align:center;">
+        <div style="font-size:1.3rem; font-weight:800; color:#7c3aed;">${story.stats.monthlyOrders}</div>
+        <div style="font-size:0.78rem; color:#64748b; font-weight:600;">Monthly Income Scale</div>
+      </div>
+      <div style="background:#faf7fc; padding:1rem; border-radius:12px; border:1px solid #ede9fe; text-align:center;">
+        <div style="font-size:1.3rem; font-weight:800; color:#06b6d4;">${story.stats.timeframe}</div>
+        <div style="font-size:0.78rem; color:#64748b; font-weight:600;">Timeframe</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.2rem; color:#4c1d95; margin-bottom:0.75rem;">💡 Secret Tips from Her Kitchen Experience</h3>
+    <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.75rem;">
+      ${story.keyLearnings.map(point => `
+        <li style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.92rem; color:#334155;">
+          <span style="color:#ec4899; font-weight:bold;">🍲</span>
+          <span>${point}</span>
+        </li>
+      `).join('')}
+    </ul>
+
+    <div style="display:flex; justify-content:flex-end;">
+      <button class="btn btn-primary btn-sm" onclick="closeModal()">
+        Close Story ✨
+      </button>
+    </div>
+  `;
+
+  modalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeModal = function() {
+  const modalOverlay = document.getElementById('modalOverlay');
+  if (modalOverlay) {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+};
+
+// Close modal when clicking outside
+document.addEventListener('click', (e) => {
+  const modalOverlay = document.getElementById('modalOverlay');
+  if (e.target === modalOverlay) {
+    closeModal();
+  }
+});
+
+// Close modal on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
+
+/* ==========================================================================
+   Business Resources Rendering & Tabs
+   ========================================================================== */
+function renderResourceCards() {
+  const container = document.getElementById('resourcesGrid');
+  if (!container) return;
+
+  container.innerHTML = BUSINESS_RESOURCES.map(res => `
+    <div class="res-card">
+      <div class="res-card-head">
+        <div class="res-icon">${res.icon}</div>
+        <div>
+          <span class="skill-badge" style="background:#ede9fe; color:#5b21b6;">${res.category}</span>
+          <h3 style="margin-top:0.25rem;">${res.title}</h3>
+        </div>
+      </div>
+      <p class="res-snippet">${res.snippet}</p>
+      <ul class="res-list">
+        ${res.items.map(item => `<li>${item}</li>`).join('')}
+      </ul>
+    </div>
+  `).join('');
+}
+
+function initResourceTabs() {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      const targetId = tab.getAttribute('data-target');
+      const targetContent = document.getElementById(targetId);
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   Interactive Food Costing & Tiffin Pricing Calculator
+   ========================================================================== */
+function initFoodCalculator() {
+  const ingredientsCostInput = document.getElementById('calcRawCost');
+  const packagingCostInput = document.getElementById('calcPackCost');
+  const utilityGasInput = document.getElementById('calcUtilityCost');
+  const marginPercentInput = document.getElementById('calcMarginPercent');
+  const targetMonthlyProfitInput = document.getElementById('calcTargetProfit');
+
+  if (!ingredientsCostInput) return;
+
+  const inputs = [ingredientsCostInput, packagingCostInput, utilityGasInput, marginPercentInput, targetMonthlyProfitInput];
+  inputs.forEach(input => {
+    if (input) input.addEventListener('input', calculateFoodBudget);
+  });
+
+  calculateFoodBudget(); // initial calculation
+}
+
+function calculateFoodBudget() {
+  const ingredientsCost = parseFloat(document.getElementById('calcRawCost')?.value) || 0;
+  const packagingCost = parseFloat(document.getElementById('calcPackCost')?.value) || 0;
+  const utilityCost = parseFloat(document.getElementById('calcUtilityCost')?.value) || 0;
+  const marginPercent = parseFloat(document.getElementById('calcMarginPercent')?.value) || 0;
+  const targetMonthlyProfit = parseFloat(document.getElementById('calcTargetProfit')?.value) || 0;
+
+  // Base Production Cost per plate/portion
+  const totalBaseCost = ingredientsCost + packagingCost + utilityCost;
+
+  // Selling Price based on target profit margin %
+  // Selling Price = Total Cost / (1 - margin%/100)
+  let sellingPrice = 0;
+  const marginFraction = marginPercent / 100;
+  if (marginFraction < 1) {
+    sellingPrice = totalBaseCost / (1 - marginFraction);
+  } else {
+    sellingPrice = totalBaseCost * 2;
+  }
+
+  const profitPerPlate = sellingPrice - totalBaseCost;
+  const monthlyPlatesNeeded = profitPerPlate > 0 ? Math.ceil(targetMonthlyProfit / profitPerPlate) : 0;
+  const dailyTiffinSubscribers = Math.ceil(monthlyPlatesNeeded / 26); // assuming 26 days/mo
+
+  // Update DOM
+  const elTotalUnitCost = document.getElementById('calcResTotalCost');
+  const elSellingPrice = document.getElementById('calcResSellingPrice');
+  const elNetProfit = document.getElementById('calcResNetProfit');
+  const elUnitsNeeded = document.getElementById('calcResUnitsNeeded');
+
+  if (elTotalUnitCost) elTotalUnitCost.innerText = `₹${totalBaseCost.toFixed(2)}`;
+  if (elSellingPrice) elSellingPrice.innerText = `₹${Math.round(sellingPrice)}`;
+  if (elNetProfit) elNetProfit.innerText = `₹${profitPerPlate.toFixed(2)}`;
+  if (elUnitsNeeded) elUnitsNeeded.innerText = `${monthlyPlatesNeeded} meals/mo (~${dailyTiffinSubscribers} daily orders)`;
+}
+
+/* ==========================================================================
+   FAQ Accordion
+   ========================================================================== */
+function initFAQs() {
+  const faqContainer = document.getElementById('faqContainer');
+  if (!faqContainer) return;
+
+  faqContainer.innerHTML = FAQ_DATA.map((faq, index) => `
+    <div class="faq-item ${index === 0 ? 'active' : ''}">
+      <div class="faq-question">
+        <span>${faq.question}</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>${faq.answer}</p>
+      </div>
+    </div>
+  `).join('');
+
+  const items = faqContainer.querySelectorAll('.faq-item');
+  items.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      items.forEach(i => i.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   Contact Form Validation & Toast Notification
+   ========================================================================== */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('contactName')?.value.trim();
+    const email = document.getElementById('contactEmail')?.value.trim();
+    const message = document.getElementById('contactMessage')?.value.trim();
+
+    if (!name || !email || !message) {
+      showToast('⚠️ Please fill in all required fields.', '#f43f5e');
+      return;
+    }
+
+    // Success response simulation
+    showToast(`🍲 Thank you Chef ${name}! Your inquiry has been received. Let's make your food brand famous!`);
+    form.reset();
+  });
+}
+
+function initNewsletterForm() {
+  const form = document.getElementById('newsletterForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailInput = form.querySelector('input[type="email"]');
+    if (emailInput && emailInput.value.trim()) {
+      showToast('💌 Subscribed! You will now receive weekly food business tips, recipe costing charts & Canva food templates.');
+      emailInput.value = '';
+    }
+  });
+}
+
+function showToast(message, borderColor) {
+  let toast = document.getElementById('toastNotification');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toastNotification';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+  }
+
+  toast.innerHTML = `<span>${message}</span>`;
+  if (borderColor) {
+    toast.style.borderLeftColor = borderColor;
+  } else {
+    toast.style.borderLeftColor = '#ec4899';
+  }
+
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 4500);
+}
+
+/* ==========================================================================
+   Back to Top Button
+   ========================================================================== */
+function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+</script>
 </body>
 </html>
